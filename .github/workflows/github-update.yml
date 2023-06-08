@@ -10,7 +10,6 @@ jobs:
     steps:
       - uses: TG908/fork-sync@v1.8
         with:
-          repo: AzurLaneAutoScript
           token: ${{ secrets.TOKEN }}
           owner: MengNianxiaoyao
           head: master
@@ -18,7 +17,6 @@ jobs:
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          repo: AzurLaneAutoScript
           token: ${{ secrets.TOKEN }}
           owner: MengNianxiaoyao
           head: master
@@ -26,7 +24,6 @@ jobs:
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          repo: AzurLaneAutoScript
           token: ${{ secrets.TOKEN }}
           owner: MengNianxiaoyao
           head: master
