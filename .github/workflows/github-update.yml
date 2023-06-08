@@ -10,22 +10,25 @@ jobs:
     steps:
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: LmeSzinc
+          repo: 'AzurLaneAutoScript'
+          token: ${{ secrets.TOKEN }}
+          owner: MengNianxiaoyao
           head: master
           base: master
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: LmeSzinc
+          repo: 'AzurLaneAutoScript'
+          token: ${{ secrets.TOKEN }}
+          owner: MengNianxiaoyao
           head: master
           base: dashboard
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          owner: LmeSzinc
+          repo: 'AzurLaneAutoScript'
+          token: ${{ secrets.TOKEN }}
+          owner: MengNianxiaoyao
           head: master
           base: mydev
           merge_method: merge
