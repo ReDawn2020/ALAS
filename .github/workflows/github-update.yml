@@ -14,6 +14,7 @@ jobs:
           head: master
           base: master
           merge_method: merge
+          auto_approve: true
       - uses: TG908/fork-sync@v1.8
         with:
           owner: MengNianxiaoyao
@@ -21,6 +22,7 @@ jobs:
           head: master
           base: dashboard
           merge_method: merge
+          auto_approve: true
       - uses: TG908/fork-sync@v1.8
         with:
           owner: MengNianxiaoyao
@@ -28,3 +30,4 @@ jobs:
           head: master
           base: mydev
           merge_method: merge
+          auto_approve: true
