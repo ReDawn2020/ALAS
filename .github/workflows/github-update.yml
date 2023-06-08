@@ -10,21 +10,21 @@ jobs:
     steps:
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: master
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: dashboard
           merge_method: merge
       - uses: TG908/fork-sync@v1.8
         with:
-          token: ${{ secrets.TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: mydev
