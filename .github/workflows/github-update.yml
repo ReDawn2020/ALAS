@@ -1,0 +1,31 @@
+name: Sync Fork
+
+on:
+  push:
+  schedule:
+    - cron: '0 21 * * *'
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: TG908/fork-sync@v1.8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: LmeSzinc
+          head: master
+          base: master
+          merge_method: merge
+      - uses: TG908/fork-sync@v1.8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: LmeSzinc
+          head: master
+          base: dashboard
+          merge_method: merge
+      - uses: TG908/fork-sync@v1.8
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          owner: LmeSzinc
+          head: master
+          base: mydev
+          merge_method: merge
