@@ -3,7 +3,7 @@ name: Sync Fork
 on:
   push:
   schedule:
-    - cron: '0 21 * * *'
+    - cron: '0 21 * * *','0 13 * * *'
 jobs:
   repo-sync:
     runs-on: ubuntu-latest
