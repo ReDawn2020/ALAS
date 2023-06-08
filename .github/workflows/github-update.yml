@@ -8,23 +8,26 @@ jobs:
   repo-sync:
     runs-on: ubuntu-latest
     steps:
-      - uses: TG908/fork-sync@v1.3
+      - uses: TG908/fork-sync@v1.6.8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: master
           merge_method: merge
-      - uses: TG908/fork-sync@v1.3
+      - uses: TG908/fork-sync@v1.6.8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: dashboard
           merge_method: merge
-      - uses: TG908/fork-sync@v1.3
+      - uses: TG908/fork-sync@v1.6.8
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
           owner: MengNianxiaoyao
           head: master
           base: mydev
