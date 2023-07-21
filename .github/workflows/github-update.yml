@@ -11,29 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Merge about master
-        uses: TG908/fork-sync@v1.8
+        uses: tgymnich/fork-sync@v1.8
         with:
           owner: MengNianxiaoyao
-          token: ${{ secrets.PERSONAL_TOKEN }}
           head: master
           base: master
+          pr_title: Auto Update
+          pr_message: Auto Update
           merge_method: merge
           auto_approve: true
-      - name: Merge about dashboard
-        uses: TG908/fork-sync@v1.8
-        with:
-          owner: MengNianxiaoyao
+          ignore_fail: false
           token: ${{ secrets.PERSONAL_TOKEN }}
-          head: master
-          base: dashboard
-          merge_method: merge
-          auto_approve: true
-      - name: Merge about mydev
-        uses: TG908/fork-sync@v1.8
-        with:
-          owner: MengNianxiaoyao
-          token: ${{ secrets.PERSONAL_TOKEN }}
-          head: master
-          base: mydev
-          merge_method: merge
-          auto_approve: true
