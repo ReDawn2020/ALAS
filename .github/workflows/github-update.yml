@@ -1,0 +1,27 @@
+name: repo-sync
+
+on:
+  workflow_dispatch:
+  push:
+  schedule:
+    - cron: '0 5,21 * * *'
+
+name: Fork Sync
+
+jobs:
+  repo-sync:
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge about master
+        uses: tgymnich/fork-sync@v1.8
+        with:
+          owner: MengNianxiaoyao
+          head: master
+          base: master
+          pr_title: Auto Update
+          pr_message: Auto Update
+          merge_method: merge
+          auto_approve: true
+          ignore_fail: false
+          token: ${{ secrets.PERSONAL_TOKEN }}
