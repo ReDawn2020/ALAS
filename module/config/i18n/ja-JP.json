@@ -83,8 +83,8 @@
       "help": ""
     },
     "Coalition": {
-      "name": "Task.Coalition.name",
-      "help": "Task.Coalition.help"
+      "name": "リトル学園",
+      "help": ""
     },
     "MaritimeEscort": {
       "name": "Maritime Escort",
@@ -684,6 +684,7 @@
       "help": "Campaign.Event.help",
       "campaign_main": "campaign_main",
       "coalition_20230323": "星霜海嵐",
+      "coalition_20240627": "リトル学園へようこそ",
       "event_20200227_cn": "凍絶の北海",
       "event_20200312_cn": "南洋に靡く硝煙（復刻）",
       "event_20200326_cn": "闇靄払う銀翼",
@@ -732,7 +733,7 @@
       "event_20220407_tw": "蒼紅的迴響(復刻)",
       "event_20220414_cn": "極夜照らす幻光（復刻）",
       "event_20220428_cn": "吟ずる瑠璃の楽章（復刻）",
-      "event_20220526_cn": "诚閃の剣 搖光の城",
+      "event_20220526_cn": "復刻诚閃の剣 搖光の城",
       "event_20220728_cn": "鋼鷲の冒険譚",
       "event_20220818_cn": "結像点作戦",
       "event_20220915_cn": "赫の涙月 菫の暁風",
@@ -1452,6 +1453,14 @@
       "name": "Coalition._info.name",
       "help": "Coalition._info.help"
     },
+    "Mode": {
+      "name": "Coalition.Mode.name",
+      "help": "Coalition.Mode.help",
+      "easy": "easy",
+      "normal": "normal",
+      "hard": "hard",
+      "ex": "ex"
+    },
     "Fleet": {
       "name": "Coalition.Fleet.name",
       "help": "Coalition.Fleet.help",
@@ -1579,6 +1588,9 @@
       "name": "Research.PresetFilter.name",
       "help": "Research.PresetFilter.help",
       "custom": "custom",
+      "series_7_blueprint_la9": "series_7_blueprint_la9",
+      "series_7_blueprint_only": "series_7_blueprint_only",
+      "series_7_la9_only": "series_7_la9_only",
       "series_6_blueprint_203": "series_6_blueprint_203",
       "series_6_blueprint_only": "series_6_blueprint_only",
       "series_6_203_only": "series_6_203_only",
@@ -2109,17 +2121,21 @@
       "name": "Mail._info.name",
       "help": "Mail._info.help"
     },
-    "Collect": {
-      "name": "Mail.Collect.name",
-      "help": "Mail.Collect.help"
+    "ClaimMerit": {
+      "name": "Mail.ClaimMerit.name",
+      "help": "Mail.ClaimMerit.help"
     },
-    "Filter": {
-      "name": "Mail.Filter.name",
-      "help": "Mail.Filter.help"
+    "ClaimMaintenance": {
+      "name": "Mail.ClaimMaintenance.name",
+      "help": "Mail.ClaimMaintenance.help"
     },
-    "Delete": {
-      "name": "Mail.Delete.name",
-      "help": "Mail.Delete.help"
+    "ClaimTradeLicense": {
+      "name": "Mail.ClaimTradeLicense.name",
+      "help": "Mail.ClaimTradeLicense.help"
+    },
+    "DeleteCollected": {
+      "name": "Mail.DeleteCollected.name",
+      "help": "Mail.DeleteCollected.help"
     }
   },
   "SupplyPack": {
