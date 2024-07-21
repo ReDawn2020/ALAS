@@ -6,7 +6,6 @@ from module.config.utils import (get_nearest_weekday_date,
                                  get_os_next_reset,
                                  get_os_reset_remain,
                                  get_server_next_update,
-                                 DEFAULT_TIME)
                                  DEFAULT_TIME,
                                  deep_get)
 from module.exception import RequestHumanTakeover, GameStuckError, ScriptError
