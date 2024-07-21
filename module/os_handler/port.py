@@ -79,11 +79,17 @@ class PortHandler(OSShop):
         self.ui_back(appear_button=PORT_MISSION_CHECK, check_button=PORT_CHECK, skip_first_screenshot=True)
         return success
 
-    def port_shop_enter(self):
+    def port_supply_buy(self):
         """
+        Buy supply in port.
+
+        Returns:
+            bool: True if success to buy any or no items found.
+                False if not enough coins to buy any.
+
         Pages:
             in: PORT_CHECK
-            out: PORT_SUPPLY_CHECK
+            out: PORT_CHECK
         """
         self.ui_click(PORT_GOTO_SUPPLY, appear_button=PORT_CHECK, check_button=PORT_SUPPLY_CHECK,
                       skip_first_screenshot=True)
@@ -91,13 +97,10 @@ class PortHandler(OSShop):
         self.device.sleep(0.5)
         self.device.screenshot()
 
-    def port_shop_quit(self):
-        """
-        Pages:
-            in: PORT_SUPPLY_CHECK
-            out: PORT_CHECK
-        """
+        success = self.handle_port_supply_buy()
+
         self.ui_back(appear_button=PORT_SUPPLY_CHECK, check_button=PORT_CHECK, skip_first_screenshot=True)
+        return success
 
     def port_dock_repair(self):
         """

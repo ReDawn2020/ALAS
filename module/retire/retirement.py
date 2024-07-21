@@ -9,7 +9,6 @@ from module.retire.assets import *
 from module.retire.enhancement import Enhancement
 from module.retire.scanner import ShipScanner
 from module.retire.setting import QuickRetireSettingHandler
-from module.ui.scroll import Scroll
 
 CARD_GRIDS = ButtonGrid(
     origin=(93, 76), delta=(164 + 2 / 3, 227), button_shape=(138, 204), grid_shape=(7, 2), name='CARD')
@@ -24,9 +23,6 @@ CARD_RARITY_COLORS = {
     # Not support marriage cards.
 }
 
-RETIRE_CONFIRM_SCROLL = Scroll(RETIRE_CONFIRM_SCROLL_AREA, color=(74, 77, 110), name='STRATEGIC_SEARCH_SCROLL')
-RETIRE_CONFIRM_SCROLL.color_threshold = 240  # Background color is (66, 72, 77), so default (256-221)=35 is not enough to dintinguish.
-
 
 class Retirement(Enhancement, QuickRetireSettingHandler):
     _unable_to_enhance = False
@@ -34,10 +30,6 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
 
     # From MapOperation
     map_cat_attack_timer = Timer(2)
-
-    @property
-    def retire_keep_common_cv(self):
-        return self.config.is_task_enabled('GemsFarming')
 
     def _retirement_choose(self, amount=10, target_rarity=('N',)):
         """
@@ -118,7 +110,7 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
                 else:
                     self.interval_clear(SHIP_CONFIRM)
             if self.appear(SHIP_CONFIRM_2, offset=(30, 30), interval=2):
-                if self.retire_keep_common_cv and not self._have_kept_cv:
+                if self.config.RETIRE_KEEP_COMMON_CV and not self._have_kept_cv:
                     self.keep_one_common_cv()
                 self.device.click(SHIP_CONFIRM_2)
                 self.interval_clear(GET_ITEMS_1)
@@ -168,14 +160,16 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
             rarity.add('SSR')
         return rarity
 
-    def retire_ships_one_click(self):
+    def retire_ships_one_click(self, amount=None):
         logger.hr('Retirement')
         logger.info('Using one click retirement.')
         self.dock_favourite_set(False)
+        if amount is None:
+            amount = self._retire_amount
         end = False
         total = 0
 
-        if self.retire_keep_common_cv:
+        if self.config.RETIRE_KEEP_COMMON_CV:
             self._have_kept_cv = False
 
         while 1:
@@ -212,10 +206,8 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
                 break
             self._retirement_confirm()
             total += 10
-            # if total >= amount:
-            #     break
-            # Always break, since game client retire all once
-            break
+            if total >= amount:
+                break
 
         logger.info(f'Total retired round: {total // 10}')
         return total
@@ -250,7 +242,7 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
         self.dock_favourite_set(False)
         total = 0
 
-        if self.retire_keep_common_cv:
+        if self.config.RETIRE_KEEP_COMMON_CV:
             self._have_kept_cv = False
 
         while amount:
@@ -329,7 +321,7 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
             self._retirement_confirm()
 
         self._have_kept_cv = _
-        self.dock_filter_set(wait_loading=False)
+        self.dock_filter_set()
 
         return total
 
@@ -464,7 +456,7 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
                 return True
         return False
 
-    def retirement_get_common_rarity_cv_in_page(self):
+    def retirement_get_common_rarity_cv(self):
         """
         Returns:
             Button:
@@ -493,22 +485,6 @@ class Retirement(Enhancement, QuickRetireSettingHandler):
                               name=f'TEMPLATE_{self.config.GemsFarming_CommonCV.upper()}_RETIRE')
 
             return None
-
-    def retirement_get_common_rarity_cv(self, skip_first_screenshot=False):
-        button = self.retirement_get_common_rarity_cv_in_page()
-        if button is not None:
-            return button
-
-        while RETIRE_CONFIRM_SCROLL.appear(main=self):
-            RETIRE_CONFIRM_SCROLL.next_page(main=self)
-            button = self.retirement_get_common_rarity_cv_in_page()
-            if button is not None:
-                return button
-            if RETIRE_CONFIRM_SCROLL.at_bottom(main=self):
-                logger.info('Scroll bar reached end, stop')
-                break
-        
-        return button
 
     def keep_one_common_cv(self):
         button = self.retirement_get_common_rarity_cv()
