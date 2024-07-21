@@ -412,7 +412,7 @@ class OperationSiren(OSMap):
                 self.config.cross_set(keys='OpsiMeowfficerFarming.Scheduler.Enable', value=True)
         else:
             logger.warning(f"Disable OpsiMeowfficerFarming that is set from OpsiHazard1Leveling : {IsDisableOpsiMeowfficerFarming}")
-        while Ture:
+        while True:
             # Limited action point preserve of hazard 1 to 200
             self.config.OS_ACTION_POINT_PRESERVE = 200
             if self.config.is_task_enabled('OpsiAshBeacon') \
