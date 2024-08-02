@@ -9,6 +9,69 @@ class GeneratedConfig:
     Auto generated configuration
     """
 
+    # Group `Oil`
+    Oil_Value = 0
+    Oil_Limit = 0
+    Oil_Color = '^000000'
+    Oil_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Coin`
+    Coin_Value = 0
+    Coin_Limit = 0
+    Coin_Color = '^FFAA33'
+    Coin_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Gem`
+    Gem_Value = 0
+    Gem_Color = '^FF3333'
+    Gem_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Pt`
+    Pt_Value = 0
+    Pt_Color = '^00BFFF'
+    Pt_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `YellowCoin`
+    YellowCoin_Value = 0
+    YellowCoin_Color = '^FF8800'
+    YellowCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `PurpleCoin`
+    PurpleCoin_Value = 0
+    PurpleCoin_Color = '^7700BB'
+    PurpleCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `ActionPoint`
+    ActionPoint_Value = 0
+    ActionPoint_Total = 0
+    ActionPoint_Color = '^0000FF'
+    ActionPoint_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Merit`
+    Merit_Value = 0
+    Merit_Color = '^FFFF00'
+    Merit_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Cube`
+    Cube_Value = 0
+    Cube_Color = '^33FFFF'
+    Cube_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Core`
+    Core_Value = 0
+    Core_Color = '^AAAAAA'
+    Core_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `Medal`
+    Medal_Value = 0
+    Medal_Color = '^FFDD00'
+    Medal_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
+    # Group `GuildCoin`
+    GuildCoin_Value = 0
+    GuildCoin_Color = '^AAAAAA'
+    GuildCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
+
     # Group `Scheduler`
     Scheduler_Enable = False  # True, False
     Scheduler_NextRun = datetime.datetime(2020, 1, 1, 0, 0)
@@ -40,10 +103,6 @@ class GeneratedConfig:
     # Group `Optimization`
     Optimization_ScreenshotInterval = 0.3
     Optimization_CombatScreenshotInterval = 1.0
-    Optimization_ClickMaxRecord = 15
-    Optimization_SingleButtonMaxCount = 12
-    Optimization_MultiButtonMaxCount1 = 6
-    Optimization_MultiButtonMaxCount2 = 6
     Optimization_TaskHoardingDuration = 0
     Optimization_WhenTaskQueueEmpty = 'goto_main'  # stay_there, goto_main, close_game
 
@@ -155,25 +214,8 @@ class GeneratedConfig:
     GemsFarming_ChangeFlagship = 'ship'  # ship, ship_equip
     GemsFarming_CommonCV = 'any'  # any, langley, bogue, ranger, hermes
     GemsFarming_ChangeVanguard = 'ship'  # disabled, ship, ship_equip
-    GemsFarming_CommonDD = 'any'  # any, favourite, aulick_or_foote, cassin_or_downes, z20_or_z21
-    GemsFarming_ALLowLowVanguardLevel = True
-    GemsFarming_FleetNumberInHardMode = 0  # 0, 1, 2
-    GemsFarming_StopIFAutoNotEnsured = True
+    GemsFarming_CommonDD = 'any'  # any, aulick_or_foote, cassin_or_downes
     GemsFarming_CommissionLimit = True
-
-    # Group `FlagshipFilter`
-    FlagshipFilter_Sort = 'default'  # default, rarity, level, total, join, intimacy, stat
-    FlagshipFilter_Index = 'default'  # default, all, vanguard, main, dd, cl, ca, bb, cv, repair, ss, others, not_available
-    FlagshipFilter_Faction = 'default'  # default, all, eagle, royal, sakura, iron, dragon, sardegna, northern, iris, vichya, other, not_available
-    FlagshipFilter_Rarity = 'default'  # default, all, common, rare, elite, super_rare, ultra
-    FlagshipFilter_Extra = 'default'  # default, no_limit, has_skin, can_retrofit, enhanceable, can_limit_break, not_level_max, can_awaken, can_awaken_plus, special, oath_skin, not_available
-
-    # Group `VanguardFilter`
-    VanguardFilter_Sort = 'default'  # default, rarity, level, total, join, intimacy, stat
-    VanguardFilter_Index = 'default'  # default, all, vanguard, main, dd, cl, ca, bb, cv, repair, ss, others, not_available
-    VanguardFilter_Faction = 'default'  # default, all, eagle, royal, sakura, iron, dragon, sardegna, northern, iris, vichya, other, not_available
-    VanguardFilter_Rarity = 'default'  # default, all, common, rare, elite, super_rare, ultra
-    VanguardFilter_Extra = 'default'  # default, no_limit, has_skin, can_retrofit, enhanceable, can_limit_break, not_level_max, can_awaken, can_awaken_plus, special, oath_skin, not_available
 
     # Group `EventGeneral`
     EventGeneral_PtLimit = 0
@@ -199,7 +241,6 @@ class GeneratedConfig:
     MaritimeEscort_Enable = True
 
     # Group `Coalition`
-    Coalition_Mode = 'hard'  # easy, normal, hard, ex
     Coalition_Fleet = 'single'  # single, multi
 
     # Group `Commission`
@@ -227,8 +268,8 @@ class GeneratedConfig:
     Research_UseCoin = 'always_use'  # always_use, only_05_hour, only_no_project, do_not_use
     Research_UsePart = 'always_use'  # always_use, only_05_hour, only_no_project, do_not_use
     Research_AllowDelay = True
-    Research_PresetFilter = 'series_7_blueprint_la9'  # custom, series_7_blueprint_la9, series_7_blueprint_only, series_7_la9_only, series_6_blueprint_203, series_6_blueprint_only, series_6_203_only, series_5_blueprint_152, series_5_blueprint_only, series_5_152_only, series_4_blueprint_tenrai, series_4_blueprint_only, series_4_tenrai_only, series_3_blueprint_234, series_3_blueprint_only, series_3_234_only, series_2_than_3_457_234, series_2_blueprint_457, series_2_blueprint_only, series_2_457_only
-    Research_CustomFilter = 'S7-DR0.5 > S7-PRY0.5 > S7-Q0.5 > S7-H0.5 > Q0.5 > S7-DR2.5\n> S7-G1.5 > S7-Q1 > S7-DR5 > 0.5 > S7-G4 > S7-Q2 > S7-PRY2.5 > reset\n> S7-DR8 > Q1 > 1 > S7-E-315 > S7-G2.5 > G1.5 > 1.5 > S7-E-031\n> S7-Q4 > Q2 > E2 > 2 > DR2.5 > PRY2.5 > G2.5 > 2.5 > S7-PRY5\n> S7-PRY8 > Q4 > G4 > 4 > S7-C6 > DR5 > PRY5 > 5 > C6 > 6 > S7-C8\n> S7-C12 > DR8 > PRY8 > C8 > 8 > C12 > 12'
+    Research_PresetFilter = 'series_6_blueprint_203'  # custom, series_6_blueprint_203, series_6_blueprint_only, series_6_203_only, series_5_blueprint_152, series_5_blueprint_only, series_5_152_only, series_4_blueprint_tenrai, series_4_blueprint_only, series_4_tenrai_only, series_3_blueprint_234, series_3_blueprint_only, series_3_234_only, series_2_than_3_457_234, series_2_blueprint_457, series_2_blueprint_only, series_2_457_only
+    Research_CustomFilter = 'S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5\n> S5-Q1 > S5-DR5 > S5-DR8 > S5-G4 > S5-PRY2.5 > 1 > S5-Q2 > reset\n> S5-G2.5 > S5-PRY5 > S5-PRY8 > 1.5 > 2 > S5-Q4 > 2.5 > 3\n> Q4 > G4 > 4 > 5 > S5-C6 > C6 > 6 > S5-C8 > 8\n> S5-C12 > 12'
 
     # Group `Dorm`
     Dorm_Collect = True
@@ -275,7 +316,7 @@ class GeneratedConfig:
     GeneralShop_UseGems = False
     GeneralShop_Refresh = False
     GeneralShop_BuySkinBox = False
-    GeneralShop_ConsumeCoins = 550000
+    GeneralShop_ConsumeCoins = False
     GeneralShop_Filter = 'BookRedT3 > BookYellowT3 > BookBlueT3 > BookRedT2\n> Cube\n> FoodT6 > FoodT5'
 
     # Group `GuildShop`
@@ -336,10 +377,9 @@ class GeneratedConfig:
     DataKey_ForceCollect = False
 
     # Group `Mail`
-    Mail_ClaimMerit = True
-    Mail_ClaimMaintenance = False
-    Mail_ClaimTradeLicense = False
-    Mail_DeleteCollected = True
+    Mail_Collect = True
+    Mail_Filter = 'Merit > Coolant'
+    Mail_Delete = False
 
     # Group `SupplyPack`
     SupplyPack_Collect = True
@@ -369,7 +409,6 @@ class GeneratedConfig:
     Hard_HardFleet = 1  # 1, 2
 
     # Group `Exercise`
-    Exercise_DelayUntilHoursBeforeNextUpdate = 12  # 1, 2, 3, 4, 5, 12
     Exercise_OpponentChooseMode = 'max_exp'  # max_exp, easiest, leftmost, easiest_else_exp
     Exercise_OpponentTrial = 1
     Exercise_ExerciseStrategy = 'aggressive'  # aggressive, fri18, sat0, sat12, sat18, sun0, sun12, sun18
@@ -404,7 +443,6 @@ class GeneratedConfig:
 
     # Group `OpsiFleet`
     OpsiFleet_Fleet = 1  # 1, 2, 3, 4
-    OpsiFleet_FleetMode = 'combat_auto'  # combat_auto, combat_manual, stand_still_in_the_middle, hide_in_bottom_left
     OpsiFleet_Submarine = False
 
     # Group `OpsiExplore`
@@ -413,8 +451,7 @@ class GeneratedConfig:
     OpsiExplore_LastZone = 0
 
     # Group `OpsiShop`
-    OpsiShop_PresetFilter = 'max_benefit_meta'  # max_benefit, max_benefit_meta, no_meta, all, custom
-    OpsiShop_CustomFilter = 'LoggerAbyssalT6 > LoggerAbyssalT5 > LoggerObscure > LoggerAbyssalT4 > ActionPoint > PurpleCoins\n> GearDesignPlanT3 > PlateRandomT4 > DevelopmentMaterialT3 > GearDesignPlanT2 > GearPart\n> OrdnanceTestingReportT3 > OrdnanceTestingReportT2 > DevelopmentMaterialT2 > OrdnanceTestingReportT1\n> METARedBook > CrystallizedHeatResistantSteel > NanoceramicAlloy > NeuroplasticProstheticArm > SupercavitationGenerator'
+    OpsiShop_BuySupply = True
 
     # Group `OpsiVoucher`
     OpsiVoucher_Filter = 'LoggerAbyssal > LoggerObscure > Book > Coin > Fragment'
@@ -442,9 +479,6 @@ class GeneratedConfig:
     OpsiMeowfficerFarming_HazardLevel = 5  # 3, 4, 5, 6, 10
     OpsiMeowfficerFarming_TargetZone = 0
 
-    # Group `HigherPriority`
-    HigherPriority_Enable = False
-
     # Group `OpsiHazard1Leveling`
     OpsiHazard1Leveling_TargetZone = 0  # 0, 44, 22
 
@@ -464,118 +498,6 @@ class GeneratedConfig:
 
     # Group `GameManager`
     GameManager_AutoRestart = True
-
-    # Group `GGHandler`
-    GGHandler_Enabled = False
-    GGHandler_GGMethod = 'u2'  # u2
-    GGHandler_RestartATX = False
-    GGHandler_GGPackageName = 'com.'
-    GGHandler_AutoRestartGG = False
-    GGHandler_RestartEverytime = True
-    GGHandler_RepushLua = True
-    GGHandler_GGMultiplyingFactor = 200
-    GGHandler_Timeout = 1200
-    GGHandler_DisabledTask = 'disable_all_dangerous_task'  # disable_all_dangerous_task, disable_guild_and_dangerous, disable_exercise, enable_all
-
-    # Group `PowerLimit`
-    PowerLimit_Exercise = 16500
-    PowerLimit_Raid = 16500
-    PowerLimit_Ash = 16500
-
-    # Group `ChangeShip`
-    ChangeShip_Enable = False
-    ChangeShip_PushLua = False
-    ChangeShip_Timeout = 90
-    ChangeShip_ShipData = '106021;1;6;4\n107041;1;6;4\n206011;1;6;4\n107011;1;6;4\n105011;1;5;6\n105021;1;5;6'
-
-    # Group `ChangeAttribute`
-    ChangeAttribute_Enable = False
-    ChangeAttribute_PushLua = False
-    ChangeAttribute_Timeout = 600
-    ChangeAttribute_ShipData = None
-
-    # Group `InfiniteDelay`
-    InfiniteDelay_Commission = False
-    InfiniteDelay_Research = False
-    InfiniteDelay_Reward = False
-
-    # Group `TurnOffForcedOnSettings`
-    TurnOffForcedOnSettings_OpsiMeowfficerFarmingFromOpsiHazard1Leveling = False
-    TurnOffForcedOnSettings_OpsiHazard1LevelingYellowCoinLimit = False
-
-    # Group `Oil`
-    Oil_Value = 0
-    Oil_Limit = 0
-    Oil_Color = '^000000'
-    Oil_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Coin`
-    Coin_Value = 0
-    Coin_Limit = 0
-    Coin_Color = '^000000'
-    Coin_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Gem`
-    Gem_Value = 0
-    Gem_Color = '^000000'
-    Gem_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Pt`
-    Pt_Value = 0
-    Pt_Color = '^000000'
-    Pt_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `YellowCoin`
-    YellowCoin_Value = 0
-    YellowCoin_Color = '^000000'
-    YellowCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `PurpleCoin`
-    PurpleCoin_Value = 0
-    PurpleCoin_Color = '^000000'
-    PurpleCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `ActionPoint`
-    ActionPoint_Value = 0
-    ActionPoint_Total = 0
-    ActionPoint_Color = '^000000'
-    ActionPoint_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Merit`
-    Merit_Value = 0
-    Merit_Color = '^000000'
-    Merit_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Cube`
-    Cube_Value = 0
-    Cube_Color = '^000000'
-    Cube_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Core`
-    Core_Value = 0
-    Core_Color = '^000000'
-    Core_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `Medal`
-    Medal_Value = 0
-    Medal_Color = '^000000'
-    Medal_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `GuildCoin`
-    GuildCoin_Value = 0
-    GuildCoin_Color = '^000000'
-    GuildCoin_Record = datetime.datetime(2020, 1, 1, 0, 0)
-
-    # Group `AutoRestart`
-    AutoRestart_Enabled = False
-    AutoRestart_AttemptsToRestart = 114514
-    AutoRestart_NotifyWhenAutoRestart = False
-
-    # Group `InstanceRestart`
-    InstanceRestart_Enabled = False
-    InstanceRestart_AttemptsToRestart = 114514
-    InstanceRestart_NotifyWhenAutoRestart = False
-    InstanceRestart_HasRestarted = 0
 
     # Group `Storage`
     Storage_Storage = {}

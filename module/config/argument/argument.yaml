@@ -2,6 +2,59 @@
 # Define arguments.
 # --------------------
 
+# ==================== Dashboard ====================
+Oil:
+  Value: 0
+  Limit: 0
+  Color: ^000000
+  Record: 2020-01-01 00:00:00
+Coin:
+  Value: 0
+  Limit: 0
+  Color: ^FFAA33
+  Record: 2020-01-01 00:00:00
+Gem:
+  Value: 0
+  Color: ^FF3333
+  Record: 2020-01-01 00:00:00
+Pt:
+  Value: 0
+  Color: ^00BFFF
+  Record: 2020-01-01 00:00:00
+YellowCoin:
+  Value: 0
+  Color: ^FF8800
+  Record: 2020-01-01 00:00:00
+PurpleCoin:
+  Value: 0
+  Color: ^7700BB
+  Record: 2020-01-01 00:00:00
+ActionPoint:
+  Value: 0
+  Total: 0
+  Color: ^0000FF
+  Record: 2020-01-01 00:00:00
+Merit:
+  Value: 0
+  Color: ^FFFF00
+  Record: 2020-01-01 00:00:00
+Cube:
+  Value: 0
+  Color: ^33FFFF
+  Record: 2020-01-01 00:00:00
+Core:
+  Value: 0
+  Color: ^AAAAAA
+  Record: 2020-01-01 00:00:00
+Medal:
+  Value: 0
+  Color: ^FFDD00
+  Record: 2020-01-01 00:00:00
+GuildCoin:
+  Value: 0
+  Color: ^AAAAAA
+  Record: 2020-01-01 00:00:00
+
 # ==================== Alas ====================
 
 Scheduler:
@@ -91,10 +144,6 @@ Error:
 Optimization:
   ScreenshotInterval: 0.3
   CombatScreenshotInterval: 1.0
-  ClickMaxRecord: 15
-  SingleButtonMaxCount: 12
-  MultiButtonMaxCount1: 6
-  MultiButtonMaxCount2: 6
   TaskHoardingDuration: 0
   WhenTaskQueueEmpty:
     value: goto_main
@@ -280,45 +329,9 @@ GemsFarming:
     option: [ disabled, ship, ship_equip ]
   CommonDD:
     value: any
-    option: [ any, favourite, aulick_or_foote , cassin_or_downes, z20_or_z21 ]
-  ALLowLowVanguardLevel: true
-  FleetNumberInHardMode:
-    value: 0
-    option: [ 0, 1, 2 ]
-  StopIFAutoNotEnsured: true
+    option: [ any, aulick_or_foote , cassin_or_downes ]
   CommissionLimit: true
-FlagshipFilter:
-  Sort:
-    value: 'default'
-    option: ['default', 'rarity', 'level', 'total', 'join', 'intimacy', 'stat']
-  Index:
-    value: 'default'
-    option: ['default', 'all', 'vanguard', 'main', 'dd', 'cl', 'ca', 'bb', 'cv', 'repair', 'ss', 'others', 'not_available']
-  Faction:
-    value: 'default'
-    option: ['default', 'all', 'eagle', 'royal', 'sakura', 'iron', 'dragon', 'sardegna', 'northern', 'iris', 'vichya', 'other', 'not_available']
-  Rarity:
-    value: 'default'
-    option: ['default', 'all', 'common', 'rare', 'elite', 'super_rare', 'ultra']
-  Extra:
-    value: 'default'
-    option: ['default', 'no_limit', 'has_skin', 'can_retrofit', 'enhanceable', 'can_limit_break', 'not_level_max', 'can_awaken', 'can_awaken_plus', 'special', 'oath_skin', 'not_available']
-VanguardFilter:
-  Sort:
-    value: 'default'
-    option: ['default', 'rarity', 'level', 'total', 'join', 'intimacy', 'stat']
-  Index:
-    value: 'default'
-    option: ['default', 'all', 'vanguard', 'main', 'dd', 'cl', 'ca', 'bb', 'cv', 'repair', 'ss', 'others', 'not_available']
-  Faction:
-    value: 'default'
-    option: ['default', 'all', 'eagle', 'royal', 'sakura', 'iron', 'dragon', 'sardegna', 'northern', 'iris', 'vichya', 'other', 'not_available']
-  Rarity:
-    value: 'default'
-    option: ['default', 'all', 'common', 'rare', 'elite', 'super_rare', 'ultra']
-  Extra:
-    value: 'default'
-    option: ['default', 'no_limit', 'has_skin', 'can_retrofit', 'enhanceable', 'can_limit_break', 'not_level_max', 'can_awaken', 'can_awaken_plus', 'special', 'oath_skin', 'not_available']
+
 # ==================== Event ====================
 
 EventGeneral:
@@ -345,9 +358,6 @@ RaidDaily:
 MaritimeEscort:
   Enable: true
 Coalition:
-  Mode:
-    value: hard
-    option: [ easy, normal, hard, ex ]
   Fleet:
     value: single
     option: [ single, multi ]
@@ -415,12 +425,9 @@ Research:
     option: [ always_use, only_05_hour, only_no_project, do_not_use ]
   AllowDelay: true
   PresetFilter:
-    value: series_7_blueprint_la9
+    value: series_6_blueprint_203
     option:
       - custom
-      - series_7_blueprint_la9
-      - series_7_blueprint_only
-      - series_7_la9_only
       - series_6_blueprint_203
       - series_6_blueprint_only
       - series_6_203_only
@@ -438,12 +445,11 @@ Research:
       - series_2_blueprint_only
       - series_2_457_only
   CustomFilter: |-
-    S7-DR0.5 > S7-PRY0.5 > S7-Q0.5 > S7-H0.5 > Q0.5 > S7-DR2.5
-    > S7-G1.5 > S7-Q1 > S7-DR5 > 0.5 > S7-G4 > S7-Q2 > S7-PRY2.5 > reset
-    > S7-DR8 > Q1 > 1 > S7-E-315 > S7-G2.5 > G1.5 > 1.5 > S7-E-031
-    > S7-Q4 > Q2 > E2 > 2 > DR2.5 > PRY2.5 > G2.5 > 2.5 > S7-PRY5
-    > S7-PRY8 > Q4 > G4 > 4 > S7-C6 > DR5 > PRY5 > 5 > C6 > 6 > S7-C8
-    > S7-C12 > DR8 > PRY8 > C8 > 8 > C12 > 12
+    S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5
+    > S5-Q1 > S5-DR5 > S5-DR8 > S5-G4 > S5-PRY2.5 > 1 > S5-Q2 > reset
+    > S5-G2.5 > S5-PRY5 > S5-PRY8 > 1.5 > 2 > S5-Q4 > 2.5 > 3
+    > Q4 > G4 > 4 > 5 > S5-C6 > C6 > 6 > S5-C8 > 8
+    > S5-C12 > 12
 Dorm:
   Collect: true
   Feed: true
@@ -491,7 +497,7 @@ GeneralShop:
   UseGems: false
   Refresh: false
   BuySkinBox: false
-  ConsumeCoins: 550000
+  ConsumeCoins: false
   Filter: |-
     BookRedT3 > BookYellowT3 > BookBlueT3 > BookRedT2
     > Cube
@@ -602,10 +608,10 @@ DataKey:
   Collect: true
   ForceCollect: false
 Mail:
-  ClaimMerit: true
-  ClaimMaintenance: false
-  ClaimTradeLicense: false
-  DeleteCollected: true
+  Collect: true
+  Filter: |-
+    Merit > Coolant
+  Delete: false
 SupplyPack:
   Collect: true
   DayOfWeek:
@@ -662,9 +668,6 @@ Hard:
     value: 1
     option: [ 1, 2 ]
 Exercise:
-  DelayUntilHoursBeforeNextUpdate:
-    value: 12
-    option: [ 1, 2, 3, 4, 5, 12]
   OpponentChooseMode:
     value: max_exp
     option: [ max_exp, easiest, leftmost, easiest_else_exp ]
@@ -710,28 +713,13 @@ OpsiFleet:
   Fleet:
     value: 1
     option: [ 1, 2, 3, 4 ]
-  FleetMode:
-    value: combat_auto
-    option: [ combat_auto, combat_manual, stand_still_in_the_middle, hide_in_bottom_left ]
   Submarine: false
 OpsiExplore:
   SpecialRadar: false
   ForceRun: false
   LastZone: 0
 OpsiShop:
-  PresetFilter:
-    value: max_benefit_meta
-    option:
-      - max_benefit
-      - max_benefit_meta
-      - no_meta
-      - all
-      - custom
-  CustomFilter: |-
-    LoggerAbyssalT6 > LoggerAbyssalT5 > LoggerObscure > LoggerAbyssalT4 > ActionPoint > PurpleCoins
-    > GearDesignPlanT3 > PlateRandomT4 > DevelopmentMaterialT3 > GearDesignPlanT2 > GearPart
-    > OrdnanceTestingReportT3 > OrdnanceTestingReportT2 > DevelopmentMaterialT2 > OrdnanceTestingReportT1
-    > METARedBook > CrystallizedHeatResistantSteel > NanoceramicAlloy > NeuroplasticProstheticArm > SupercavitationGenerator
+  BuySupply: true
 OpsiVoucher:
   Filter: |-
     LoggerAbyssal > LoggerObscure > Book > Coin > Fragment
@@ -757,8 +745,6 @@ OpsiMeowfficerFarming:
     option: [ 3, 4, 5, 6, 10 ]
   TargetZone:
     value: 0
-HigherPriority:
-  Enable: false
 OpsiHazard1Leveling:
   TargetZone:
     value: 0
@@ -790,168 +776,3 @@ AzurLaneUncensored:
     display: disabled
 GameManager:
   AutoRestart: true
-
-GGHandler:
-  Enabled: false
-  GGMethod:
-    value: u2
-    option: [ u2 ]
-  RestartATX: false
-  GGPackageName: com.
-  AutoRestartGG: false
-  RestartEverytime:
-    value: true
-#    display: disabled
-  RepushLua: true
-  GGMultiplyingFactor: 200
-  Timeout: 1200
-  DisabledTask:
-    value: disable_all_dangerous_task
-    option: [
-      disable_all_dangerous_task,
-      disable_guild_and_dangerous,
-      disable_exercise,
-      enable_all,
-    ]
-PowerLimit:
-  Exercise: 16500
-  Raid: 16500
-  Ash: 16500
-ChangeShip:
-  Enable: false
-  PushLua: false
-  Timeout: 90
-  ShipData:
-    type: textarea
-    value: |-
-      106021;1;6;4
-      107041;1;6;4
-      206011;1;6;4
-      107011;1;6;4
-      105011;1;5;6
-      105021;1;5;6
-ChangeAttribute:
-  Enable: false
-  PushLua: false
-  Timeout: 600
-  ShipData:
-    type: textarea
-    value: ''
-
-InfiniteDelay:
-  Commission:
-    value: false
-  Research:
-    value: false
-  Reward:
-    value: false
-TurnOffForcedOnSettings:
-  OpsiMeowfficerFarmingFromOpsiHazard1Leveling:
-    value: false
-  OpsiHazard1LevelingYellowCoinLimit:
-    value: false
-
-
-# ==================== Dashboard ====================
-Oil:
-  Value: 0
-  Limit: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Coin:
-  Value: 0
-  Limit: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Gem:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Pt:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-YellowCoin:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-PurpleCoin:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-ActionPoint:
-  Value: 0
-  Total: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Merit:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Cube:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Core:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-Medal:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-GuildCoin:
-  Value: 0
-  Color:
-    value: ^000000
-    display: hide
-  Record: 2020-01-01 00:00:00
-
-
-
-# ==================== AutoRestart ====================
-AutoRestart:
-  Enabled:
-    type: checkbox
-    value: false
-  AttemptsToRestart:
-    type: input
-    value: 114514
-  NotifyWhenAutoRestart:
-    type: checkbox
-    value: false
-InstanceRestart:
-  Enabled:
-    type: checkbox
-    value: false
-  AttemptsToRestart:
-    type: input
-    value: 114514
-  NotifyWhenAutoRestart:
-    type: checkbox
-    value: false
-  HasRestarted:
-    value: 0
-    display: hide

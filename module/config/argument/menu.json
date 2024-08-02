@@ -25,7 +25,6 @@
       "EventGeneral",
       "Event",
       "Event2",
-      "Event3",
       "Raid",
       "Coalition",
       "MaritimeEscort",
@@ -102,8 +101,7 @@
       "OpsiDaemon",
       "Benchmark",
       "AzurLaneUncensored",
-      "GameManager",
-      "SomethingSpecial"
+      "GameManager"
     ]
   }
 }

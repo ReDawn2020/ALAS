@@ -1,4 +1,206 @@
 {
+  "Dashboard": {
+    "Oil": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Limit": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^000000"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Coin": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Limit": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^FFAA33"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Gem": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^FF3333"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Pt": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^00BFFF"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Cube": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^33FFFF"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "ActionPoint": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Total": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^0000FF"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "YellowCoin": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^FF8800"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "PurpleCoin": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^7700BB"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Core": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^AAAAAA"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Medal": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^FFDD00"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Merit": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^FFFF00"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "GuildCoin": {
+      "Value": {
+        "type": "input",
+        "value": 0
+      },
+      "Color": {
+        "type": "input",
+        "value": "^AAAAAA"
+      },
+      "Record": {
+        "type": "datetime",
+        "value": "2020-01-01 00:00:00",
+        "validate": "datetime"
+      }
+    },
+    "Storage": {
+      "Storage": {
+        "type": "storage",
+        "value": {},
+        "valuetype": "ignore",
+        "display": "disabled"
+      }
+    }
+  },
   "Alas": {
     "Emulator": {
       "Serial": {
@@ -197,22 +399,6 @@
       "CombatScreenshotInterval": {
         "type": "input",
         "value": 1.0
-      },
-      "ClickMaxRecord": {
-        "type": "input",
-        "value": 15
-      },
-      "SingleButtonMaxCount": {
-        "type": "input",
-        "value": 12
-      },
-      "MultiButtonMaxCount1": {
-        "type": "input",
-        "value": 6
-      },
-      "MultiButtonMaxCount2": {
-        "type": "input",
-        "value": 6
       },
       "TaskHoardingDuration": {
         "type": "input",
@@ -421,39 +607,6 @@
       "ServerUpdate": {
         "type": "input",
         "value": "00:00",
-        "display": "hide"
-      }
-    },
-    "AutoRestart": {
-      "Enabled": {
-        "type": "checkbox",
-        "value": false
-      },
-      "AttemptsToRestart": {
-        "type": "input",
-        "value": 114514
-      },
-      "NotifyWhenAutoRestart": {
-        "type": "checkbox",
-        "value": false
-      }
-    },
-    "InstanceRestart": {
-      "Enabled": {
-        "type": "checkbox",
-        "value": false
-      },
-      "AttemptsToRestart": {
-        "type": "input",
-        "value": 114514
-      },
-      "NotifyWhenAutoRestart": {
-        "type": "checkbox",
-        "value": false
-      },
-      "HasRestarted": {
-        "type": "input",
-        "value": 0,
         "display": "hide"
       }
     },
@@ -1667,200 +1820,13 @@
         "value": "any",
         "option": [
           "any",
-          "favourite",
           "aulick_or_foote",
-          "cassin_or_downes",
-          "z20_or_z21"
+          "cassin_or_downes"
         ]
-      },
-      "ALLowLowVanguardLevel": {
-        "type": "checkbox",
-        "value": true
-      },
-      "FleetNumberInHardMode": {
-        "type": "select",
-        "value": 0,
-        "option": [
-          0,
-          1,
-          2
-        ]
-      },
-      "StopIFAutoNotEnsured": {
-        "type": "checkbox",
-        "value": true
       },
       "CommissionLimit": {
         "type": "checkbox",
         "value": true
-      }
-    },
-    "FlagshipFilter": {
-      "Sort": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "rarity",
-          "level",
-          "total",
-          "join",
-          "intimacy",
-          "stat"
-        ]
-      },
-      "Index": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "vanguard",
-          "main",
-          "dd",
-          "cl",
-          "ca",
-          "bb",
-          "cv",
-          "repair",
-          "ss",
-          "others",
-          "not_available"
-        ]
-      },
-      "Faction": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "eagle",
-          "royal",
-          "sakura",
-          "iron",
-          "dragon",
-          "sardegna",
-          "northern",
-          "iris",
-          "vichya",
-          "other",
-          "not_available"
-        ]
-      },
-      "Rarity": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "common",
-          "rare",
-          "elite",
-          "super_rare",
-          "ultra"
-        ]
-      },
-      "Extra": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "no_limit",
-          "has_skin",
-          "can_retrofit",
-          "enhanceable",
-          "can_limit_break",
-          "not_level_max",
-          "can_awaken",
-          "can_awaken_plus",
-          "special",
-          "oath_skin",
-          "not_available"
-        ]
-      }
-    },
-    "VanguardFilter": {
-      "Sort": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "rarity",
-          "level",
-          "total",
-          "join",
-          "intimacy",
-          "stat"
-        ]
-      },
-      "Index": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "vanguard",
-          "main",
-          "dd",
-          "cl",
-          "ca",
-          "bb",
-          "cv",
-          "repair",
-          "ss",
-          "others",
-          "not_available"
-        ]
-      },
-      "Faction": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "eagle",
-          "royal",
-          "sakura",
-          "iron",
-          "dragon",
-          "sardegna",
-          "northern",
-          "iris",
-          "vichya",
-          "other",
-          "not_available"
-        ]
-      },
-      "Rarity": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "all",
-          "common",
-          "rare",
-          "elite",
-          "super_rare",
-          "ultra"
-        ]
-      },
-      "Extra": {
-        "type": "select",
-        "value": "default",
-        "option": [
-          "default",
-          "no_limit",
-          "has_skin",
-          "can_retrofit",
-          "enhanceable",
-          "can_limit_break",
-          "not_level_max",
-          "can_awaken",
-          "can_awaken_plus",
-          "special",
-          "oath_skin",
-          "not_available"
-        ]
       }
     },
     "Campaign": {
@@ -1940,13 +1906,13 @@
         ],
         "display": "hide",
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -2205,7 +2171,7 @@
         "value": "12-4"
       },
       "Event": {
-        "type": "select",
+        "type": "state",
         "value": "campaign_main",
         "option": [
           "event_20200227_cn",
@@ -2275,13 +2241,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -2655,7 +2621,7 @@
         "value": "12-4"
       },
       "Event": {
-        "type": "select",
+        "type": "state",
         "value": "campaign_main",
         "option": [
           "event_20200227_cn",
@@ -2725,463 +2691,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20210916_cn",
+          "event_20230525_cn",
           "event_20240521_cn"
         ],
         "cn": "event_20240521_cn",
         "en": "event_20240521_cn",
         "jp": "event_20240521_cn",
-        "tw": "event_20210916_cn"
-      },
-      "Mode": {
-        "type": "select",
-        "value": "normal",
-        "option": [
-          "normal",
-          "hard"
-        ],
-        "display": "hide"
-      },
-      "UseClearMode": {
-        "type": "checkbox",
-        "value": true
-      },
-      "UseFleetLock": {
-        "type": "checkbox",
-        "value": true
-      },
-      "UseAutoSearch": {
-        "type": "checkbox",
-        "value": true
-      },
-      "Use2xBook": {
-        "type": "checkbox",
-        "value": false
-      },
-      "AmbushEvade": {
-        "type": "checkbox",
-        "value": true,
-        "display": "hide"
-      }
-    },
-    "StopCondition": {
-      "OilLimit": {
-        "type": "input",
-        "value": 1000
-      },
-      "RunCount": {
-        "type": "input",
-        "value": 0
-      },
-      "MapAchievement": {
-        "type": "select",
-        "value": "non_stop",
-        "option": [
-          "non_stop",
-          "100_percent_clear",
-          "map_3_stars",
-          "threat_safe",
-          "threat_safe_without_3_stars"
-        ]
-      },
-      "StageIncrease": {
-        "type": "checkbox",
-        "value": false
-      },
-      "GetNewShip": {
-        "type": "checkbox",
-        "value": false
-      },
-      "ReachLevel": {
-        "type": "input",
-        "value": 0
-      }
-    },
-    "Fleet": {
-      "Fleet1": {
-        "type": "select",
-        "value": 1,
-        "option": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      },
-      "Fleet1Formation": {
-        "type": "select",
-        "value": "double_line",
-        "option": [
-          "line_ahead",
-          "double_line",
-          "diamond"
-        ]
-      },
-      "Fleet1Mode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
-      "Fleet1Step": {
-        "type": "select",
-        "value": 3,
-        "option": [
-          2,
-          3,
-          4,
-          5
-        ]
-      },
-      "Fleet2": {
-        "type": "select",
-        "value": 2,
-        "option": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5,
-          6
-        ]
-      },
-      "Fleet2Formation": {
-        "type": "select",
-        "value": "double_line",
-        "option": [
-          "line_ahead",
-          "double_line",
-          "diamond"
-        ]
-      },
-      "Fleet2Mode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
-      "Fleet2Step": {
-        "type": "select",
-        "value": 2,
-        "option": [
-          2,
-          3,
-          4,
-          5
-        ]
-      },
-      "FleetOrder": {
-        "type": "select",
-        "value": "fleet1_mob_fleet2_boss",
-        "option": [
-          "fleet1_mob_fleet2_boss",
-          "fleet1_boss_fleet2_mob",
-          "fleet1_all_fleet2_standby",
-          "fleet1_standby_fleet2_all"
-        ]
-      }
-    },
-    "Submarine": {
-      "Fleet": {
-        "type": "select",
-        "value": 0,
-        "option": [
-          0,
-          1,
-          2
-        ]
-      },
-      "Mode": {
-        "type": "select",
-        "value": "do_not_use",
-        "option": [
-          "do_not_use",
-          "hunt_only",
-          "boss_only",
-          "hunt_and_boss",
-          "every_combat"
-        ]
-      },
-      "AutoSearchMode": {
-        "type": "select",
-        "value": "sub_standby",
-        "option": [
-          "sub_standby",
-          "sub_auto_call"
-        ]
-      },
-      "DistanceToBoss": {
-        "type": "select",
-        "value": "2_grid_to_boss",
-        "option": [
-          "to_boss_position",
-          "1_grid_to_boss",
-          "2_grid_to_boss",
-          "use_open_ocean_support"
-        ]
-      }
-    },
-    "Emotion": {
-      "Mode": {
-        "type": "select",
-        "value": "calculate",
-        "option": [
-          "calculate",
-          "ignore",
-          "calculate_ignore"
-        ]
-      },
-      "Fleet1Value": {
-        "type": "input",
-        "value": 119
-      },
-      "Fleet1Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime",
-        "display": "disabled"
-      },
-      "Fleet1Control": {
-        "type": "select",
-        "value": "prevent_yellow_face",
-        "option": [
-          "keep_exp_bonus",
-          "prevent_green_face",
-          "prevent_yellow_face",
-          "prevent_red_face"
-        ]
-      },
-      "Fleet1Recover": {
-        "type": "select",
-        "value": "not_in_dormitory",
-        "option": [
-          "not_in_dormitory",
-          "dormitory_floor_1",
-          "dormitory_floor_2"
-        ]
-      },
-      "Fleet1Oath": {
-        "type": "checkbox",
-        "value": false
-      },
-      "Fleet2Value": {
-        "type": "input",
-        "value": 119
-      },
-      "Fleet2Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime",
-        "display": "disabled"
-      },
-      "Fleet2Control": {
-        "type": "select",
-        "value": "prevent_yellow_face",
-        "option": [
-          "keep_exp_bonus",
-          "prevent_green_face",
-          "prevent_yellow_face",
-          "prevent_red_face"
-        ]
-      },
-      "Fleet2Recover": {
-        "type": "select",
-        "value": "not_in_dormitory",
-        "option": [
-          "not_in_dormitory",
-          "dormitory_floor_1",
-          "dormitory_floor_2"
-        ]
-      },
-      "Fleet2Oath": {
-        "type": "checkbox",
-        "value": false
-      }
-    },
-    "HpControl": {
-      "UseHpBalance": {
-        "type": "checkbox",
-        "value": false
-      },
-      "UseEmergencyRepair": {
-        "type": "checkbox",
-        "value": false
-      },
-      "UseLowHpRetreat": {
-        "type": "checkbox",
-        "value": false
-      },
-      "HpBalanceThreshold": {
-        "type": "input",
-        "value": 0.2
-      },
-      "HpBalanceWeight": {
-        "type": "input",
-        "value": "1000, 1000, 1000"
-      },
-      "RepairUseSingleThreshold": {
-        "type": "input",
-        "value": 0.3
-      },
-      "RepairUseMultiThreshold": {
-        "type": "input",
-        "value": 0.6
-      },
-      "LowHpRetreatThreshold": {
-        "type": "input",
-        "value": 0.3
-      }
-    },
-    "EnemyPriority": {
-      "EnemyScaleBalanceWeight": {
-        "type": "select",
-        "value": "default_mode",
-        "option": [
-          "default_mode",
-          "S3_enemy_first",
-          "S1_enemy_first"
-        ]
-      }
-    },
-    "Storage": {
-      "Storage": {
-        "type": "storage",
-        "value": {},
-        "valuetype": "ignore",
-        "display": "disabled"
-      }
-    }
-  },
-  "Event3": {
-    "Scheduler": {
-      "Enable": {
-        "type": "checkbox",
-        "value": false,
-        "option": [
-          true,
-          false
-        ]
-      },
-      "NextRun": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      },
-      "Command": {
-        "type": "input",
-        "value": "Event3",
-        "display": "hide"
-      },
-      "SuccessInterval": {
-        "type": "input",
-        "value": 0,
-        "display": "hide"
-      },
-      "FailureInterval": {
-        "type": "input",
-        "value": 120,
-        "display": "hide"
-      },
-      "ServerUpdate": {
-        "type": "input",
-        "value": "00:00",
-        "display": "hide"
-      }
-    },
-    "Campaign": {
-      "Name": {
-        "type": "input",
-        "value": "12-4"
-      },
-      "Event": {
-        "type": "select",
-        "value": "campaign_main",
-        "option": [
-          "event_20200227_cn",
-          "event_20200312_cn",
-          "event_20200326_cn",
-          "event_20200423_cn",
-          "event_20200507_cn",
-          "event_20200521_cn",
-          "event_20200521_en",
-          "event_20200603_cn",
-          "event_20200603_en",
-          "event_20200611_en",
-          "event_20200716_en",
-          "event_20200723_cn",
-          "event_20200806_cn",
-          "event_20200820_cn",
-          "event_20200903_en",
-          "event_20200917_cn",
-          "event_20201002_en",
-          "event_20201012_cn",
-          "event_20201029_cn",
-          "event_20201126_cn",
-          "event_20201229_cn",
-          "event_20210121_cn",
-          "event_20210225_cn",
-          "event_20210225_tw",
-          "event_20210325_cn",
-          "event_20210415_tw",
-          "event_20210422_cn",
-          "event_20210429_tw",
-          "event_20210527_cn",
-          "event_20210527_tw",
-          "event_20210610_tw",
-          "event_20210624_cn",
-          "event_20210624_tw",
-          "event_20210722_cn",
-          "event_20210819_cn",
-          "event_20210916_cn",
-          "event_20211028_cn",
-          "event_20211028_tw",
-          "event_20211111_cn",
-          "event_20211125_cn",
-          "event_20211229_cn",
-          "event_20220210_cn",
-          "event_20220224_cn",
-          "event_20220310_tw",
-          "event_20220324_cn",
-          "event_20220407_tw",
-          "event_20220414_cn",
-          "event_20220428_cn",
-          "event_20220526_cn",
-          "event_20220728_cn",
-          "event_20220818_cn",
-          "event_20220915_cn",
-          "event_20221124_cn",
-          "event_20221222_cn",
-          "event_20230223_cn",
-          "event_20230525_cn",
-          "event_20230803_cn",
-          "event_20230817_cn",
-          "event_20230914_cn",
-          "event_20231026_cn",
-          "event_20231123_cn",
-          "event_20231221_cn",
-          "event_20240229_cn",
-          "event_20240425_cn",
-          "event_20240521_cn"
-        ],
-        "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
-        ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -3795,23 +3311,20 @@
     "Campaign": {
       "Name": {
         "type": "input",
-        "value": "dynamic",
-        "display": "hide"
+        "value": "12-4"
       },
       "Event": {
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "coalition_20230323",
-          "coalition_20240627"
+          "coalition_20230323"
         ],
         "option_bold": [
-          "coalition_20230323",
-          "coalition_20240627"
+          "coalition_20230323"
         ],
-        "cn": "coalition_20240627",
-        "en": "coalition_20240627",
-        "jp": "coalition_20240627",
+        "cn": "coalition_20230323",
+        "en": "coalition_20230323",
+        "jp": "coalition_20230323",
         "tw": "coalition_20230323"
       },
       "Mode": {
@@ -3850,16 +3363,6 @@
       }
     },
     "Coalition": {
-      "Mode": {
-        "type": "select",
-        "value": "hard",
-        "option": [
-          "easy",
-          "normal",
-          "hard",
-          "ex"
-        ]
-      },
       "Fleet": {
         "type": "select",
         "value": "single",
@@ -4584,13 +4087,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -5051,13 +4554,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -5518,13 +5021,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -5985,13 +5488,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -6442,13 +5945,13 @@
           "event_20240521_cn"
         ],
         "option_bold": [
-          "event_20211229_cn",
-          "event_20220526_cn"
+          "event_20230525_cn",
+          "event_20240521_cn"
         ],
-        "cn": "event_20220526_cn",
-        "en": "event_20220526_cn",
-        "jp": "event_20220526_cn",
-        "tw": "event_20211229_cn"
+        "cn": "event_20240521_cn",
+        "en": "event_20240521_cn",
+        "jp": "event_20240521_cn",
+        "tw": "event_20230525_cn"
       },
       "Mode": {
         "type": "select",
@@ -7067,16 +6570,14 @@
         "type": "state",
         "value": "campaign_main",
         "option": [
-          "coalition_20230323",
-          "coalition_20240627"
+          "coalition_20230323"
         ],
         "option_bold": [
-          "coalition_20230323",
-          "coalition_20240627"
+          "coalition_20230323"
         ],
-        "cn": "coalition_20240627",
-        "en": "coalition_20240627",
-        "jp": "coalition_20240627",
+        "cn": "coalition_20230323",
+        "en": "coalition_20230323",
+        "jp": "coalition_20230323",
         "tw": "coalition_20230323"
       },
       "Mode": {
@@ -7115,17 +6616,6 @@
       }
     },
     "Coalition": {
-      "Mode": {
-        "type": "select",
-        "value": "hard",
-        "option": [
-          "easy",
-          "normal",
-          "hard",
-          "ex"
-        ],
-        "display": "hide"
-      },
       "Fleet": {
         "type": "select",
         "value": "single",
@@ -7500,12 +6990,9 @@
       },
       "PresetFilter": {
         "type": "select",
-        "value": "series_7_blueprint_la9",
+        "value": "series_6_blueprint_203",
         "option": [
           "custom",
-          "series_7_blueprint_la9",
-          "series_7_blueprint_only",
-          "series_7_la9_only",
           "series_6_blueprint_203",
           "series_6_blueprint_only",
           "series_6_203_only",
@@ -7526,7 +7013,7 @@
       },
       "CustomFilter": {
         "type": "textarea",
-        "value": "S7-DR0.5 > S7-PRY0.5 > S7-Q0.5 > S7-H0.5 > Q0.5 > S7-DR2.5\n> S7-G1.5 > S7-Q1 > S7-DR5 > 0.5 > S7-G4 > S7-Q2 > S7-PRY2.5 > reset\n> S7-DR8 > Q1 > 1 > S7-E-315 > S7-G2.5 > G1.5 > 1.5 > S7-E-031\n> S7-Q4 > Q2 > E2 > 2 > DR2.5 > PRY2.5 > G2.5 > 2.5 > S7-PRY5\n> S7-PRY8 > Q4 > G4 > 4 > S7-C6 > DR5 > PRY5 > 5 > C6 > 6 > S7-C8\n> S7-C12 > DR8 > PRY8 > C8 > 8 > C12 > 12"
+        "value": "S5-DR0.5 > S5-PRY0.5 > S5-H0.5 > S5-Q0.5 > S5-DR2.5 > 0.5 > S5-G1.5\n> S5-Q1 > S5-DR5 > S5-DR8 > S5-G4 > S5-PRY2.5 > 1 > S5-Q2 > reset\n> S5-G2.5 > S5-PRY5 > S5-PRY8 > 1.5 > 2 > S5-Q4 > 2.5 > 3\n> Q4 > G4 > 4 > 5 > S5-C6 > C6 > 6 > S5-C8 > 8\n> S5-C12 > 12"
       }
     },
     "Storage": {
@@ -8138,18 +7625,6 @@
       }
     },
     "Exercise": {
-      "DelayUntilHoursBeforeNextUpdate": {
-        "type": "select",
-        "value": 12,
-        "option": [
-          1,
-          2,
-          3,
-          4,
-          5,
-          12
-        ]
-      },
       "OpponentChooseMode": {
         "type": "select",
         "value": "max_exp",
@@ -8255,8 +7730,8 @@
         "value": false
       },
       "ConsumeCoins": {
-        "type": "input",
-        "value": 550000
+        "type": "checkbox",
+        "value": false
       },
       "Filter": {
         "type": "textarea",
@@ -8781,21 +8256,17 @@
       }
     },
     "Mail": {
-      "ClaimMerit": {
+      "Collect": {
         "type": "checkbox",
         "value": true
       },
-      "ClaimMaintenance": {
+      "Filter": {
+        "type": "textarea",
+        "value": "Merit > Coolant"
+      },
+      "Delete": {
         "type": "checkbox",
         "value": false
-      },
-      "ClaimTradeLicense": {
-        "type": "checkbox",
-        "value": false
-      },
-      "DeleteCollected": {
-        "type": "checkbox",
-        "value": true
       }
     },
     "SupplyPack": {
@@ -9098,16 +8569,6 @@
           4
         ]
       },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
       "Submarine": {
         "type": "checkbox",
         "value": false
@@ -9159,20 +8620,9 @@
       }
     },
     "OpsiShop": {
-      "PresetFilter": {
-        "type": "select",
-        "value": "max_benefit_meta",
-        "option": [
-          "max_benefit",
-          "max_benefit_meta",
-          "no_meta",
-          "all",
-          "custom"
-        ]
-      },
-      "CustomFilter": {
-        "type": "textarea",
-        "value": "LoggerAbyssalT6 > LoggerAbyssalT5 > LoggerObscure > LoggerAbyssalT4 > ActionPoint > PurpleCoins\n> GearDesignPlanT3 > PlateRandomT4 > DevelopmentMaterialT3 > GearDesignPlanT2 > GearPart\n> OrdnanceTestingReportT3 > OrdnanceTestingReportT2 > DevelopmentMaterialT2 > OrdnanceTestingReportT1\n> METARedBook > CrystallizedHeatResistantSteel > NanoceramicAlloy > NeuroplasticProstheticArm > SupercavitationGenerator"
+      "BuySupply": {
+        "type": "checkbox",
+        "value": true
       }
     },
     "Storage": {
@@ -9292,16 +8742,6 @@
           4
         ]
       },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
       "Submarine": {
         "type": "checkbox",
         "value": false
@@ -9367,16 +8807,6 @@
           2,
           3,
           4
-        ]
-      },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
         ]
       },
       "Submarine": {
@@ -9497,16 +8927,6 @@
           4
         ]
       },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
       "Submarine": {
         "type": "checkbox",
         "value": false
@@ -9567,34 +8987,6 @@
       "Filter": {
         "type": "textarea",
         "value": "Fleet-4 > CallSubmarine > Fleet-2 > Fleet-3 > Fleet-1"
-      }
-    },
-    "OpsiFleet": {
-      "Fleet": {
-        "type": "select",
-        "value": 1,
-        "option": [
-          1,
-          2,
-          3,
-          4
-        ],
-        "display": "hide"
-      },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
-      "Submarine": {
-        "type": "checkbox",
-        "value": true,
-        "display": "hide"
       }
     },
     "Storage": {
@@ -9743,16 +9135,6 @@
           4
         ]
       },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
-        ]
-      },
       "Submarine": {
         "type": "checkbox",
         "value": false
@@ -9803,12 +9185,6 @@
         "display": "hide"
       }
     },
-    "HigherPriority": {
-      "Enable": {
-        "type": "checkbox",
-        "value": false
-      }
-    },
     "OpsiHazard1Leveling": {
       "TargetZone": {
         "type": "select",
@@ -9829,16 +9205,6 @@
           2,
           3,
           4
-        ]
-      },
-      "FleetMode": {
-        "type": "select",
-        "value": "combat_auto",
-        "option": [
-          "combat_auto",
-          "combat_manual",
-          "stand_still_in_the_middle",
-          "hide_in_bottom_left"
         ]
       },
       "Submarine": {
@@ -9991,355 +9357,6 @@
       "AutoRestart": {
         "type": "checkbox",
         "value": true
-      }
-    },
-    "GGHandler": {
-      "Enabled": {
-        "type": "checkbox",
-        "value": false
-      },
-      "GGMethod": {
-        "type": "select",
-        "value": "u2",
-        "option": [
-          "u2"
-        ]
-      },
-      "RestartATX": {
-        "type": "checkbox",
-        "value": false
-      },
-      "GGPackageName": {
-        "type": "input",
-        "value": "com."
-      },
-      "AutoRestartGG": {
-        "type": "checkbox",
-        "value": false
-      },
-      "RestartEverytime": {
-        "type": "checkbox",
-        "value": true
-      },
-      "RepushLua": {
-        "type": "checkbox",
-        "value": true
-      },
-      "GGMultiplyingFactor": {
-        "type": "input",
-        "value": 200
-      },
-      "Timeout": {
-        "type": "input",
-        "value": 1200
-      },
-      "DisabledTask": {
-        "type": "select",
-        "value": "disable_all_dangerous_task",
-        "option": [
-          "disable_all_dangerous_task",
-          "disable_guild_and_dangerous",
-          "disable_exercise",
-          "enable_all"
-        ]
-      }
-    },
-    "PowerLimit": {
-      "Exercise": {
-        "type": "input",
-        "value": 16500
-      },
-      "Raid": {
-        "type": "input",
-        "value": 16500
-      },
-      "Ash": {
-        "type": "input",
-        "value": 16500
-      }
-    },
-    "ChangeShip": {
-      "Enable": {
-        "type": "checkbox",
-        "value": false
-      },
-      "PushLua": {
-        "type": "checkbox",
-        "value": false
-      },
-      "Timeout": {
-        "type": "input",
-        "value": 90
-      },
-      "ShipData": {
-        "type": "textarea",
-        "value": "106021;1;6;4\n107041;1;6;4\n206011;1;6;4\n107011;1;6;4\n105011;1;5;6\n105021;1;5;6"
-      }
-    },
-    "ChangeAttribute": {
-      "Enable": {
-        "type": "checkbox",
-        "value": false
-      },
-      "PushLua": {
-        "type": "checkbox",
-        "value": false
-      },
-      "Timeout": {
-        "type": "input",
-        "value": 600
-      },
-      "ShipData": {
-        "type": "textarea",
-        "value": ""
-      }
-    },
-    "Storage": {
-      "Storage": {
-        "type": "storage",
-        "value": {},
-        "valuetype": "ignore",
-        "display": "disabled"
-      }
-    }
-  },
-  "SomethingSpecial": {
-    "InfiniteDelay": {
-      "Commission": {
-        "type": "checkbox",
-        "value": false
-      },
-      "Research": {
-        "type": "checkbox",
-        "value": false
-      },
-      "Reward": {
-        "type": "checkbox",
-        "value": false
-      }
-    },
-    "TurnOffForcedOnSettings": {
-      "OpsiMeowfficerFarmingFromOpsiHazard1Leveling": {
-        "type": "checkbox",
-        "value": false
-      },
-      "OpsiHazard1LevelingYellowCoinLimit": {
-        "type": "checkbox",
-        "value": false
-      }
-    },
-    "Storage": {
-      "Storage": {
-        "type": "storage",
-        "value": {},
-        "valuetype": "ignore",
-        "display": "disabled"
-      }
-    }
-  },
-  "Dashboard": {
-    "Oil": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Limit": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^000000",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Coin": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Limit": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^FFAA33",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Gem": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^FF3333",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Pt": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^00BFFF",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Cube": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^33FFFF",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "ActionPoint": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Total": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^0000FF",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "YellowCoin": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^FF8800",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "PurpleCoin": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^7700BB",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Core": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^AAAAAA",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Medal": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^FFDD00",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "Merit": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^FFFF00",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
-      }
-    },
-    "GuildCoin": {
-      "Value": {
-        "type": "input",
-        "value": 0
-      },
-      "Color": {
-        "type": "input",
-        "value": "^AAAAAA",
-        "display": "hide"
-      },
-      "Record": {
-        "type": "datetime",
-        "value": "2020-01-01 00:00:00",
-        "validate": "datetime"
       }
     },
     "Storage": {

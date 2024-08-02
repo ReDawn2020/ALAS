@@ -163,8 +163,6 @@ class MapOperation(MysteryHandler, FleetPreparation, Retirement, FastForwardHand
                         self.handle_map_stop()
                         raise ScriptEnd(f'Reach condition: {self.config.StopCondition_MapAchievement}')
                     self.device.click(MAP_PREPARATION)
-                    if self.handle_retirement():
-                        continue
                     map_click += 1
                     map_timer.reset()
                     campaign_timer.reset()

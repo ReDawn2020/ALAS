@@ -9,7 +9,6 @@ from module.base.decorator import cached_property
 from module.config.config import AzurLaneConfig
 from module.config.env import IS_ON_PHONE_CLOUD
 from module.config.utils import deep_iter
-from module.device.method.utils import get_serial_pair
 from module.exception import RequestHumanTakeover
 from module.logger import logger
 
@@ -90,10 +89,6 @@ class ConnectionAttr:
             res = re.search(r'(127\.\d+\.\d+\.\d+:\d+)', serial)
             if res:
                 serial = res.group(1)
-        # 12127.0.0.1:16384
-        serial = serial.replace('12127.0.0.1', '127.0.0.1')
-        # auto127.0.0.1:16384
-        serial = serial.replace('auto127.0.0.1', '127.0.0.1').replace('autoemulator', 'emulator')
         return str(serial)
 
     def serial_check(self):
@@ -149,11 +144,8 @@ class ConnectionAttr:
 
     @cached_property
     def port(self) -> int:
-        port_serial, _ = get_serial_pair(self.serial)
-        if port_serial is None:
-            port_serial = self.serial
         try:
-            return int(port_serial.split(':')[1])
+            return int(self.serial.split(':')[1])
         except (IndexError, ValueError):
             return 0
 
@@ -171,10 +163,6 @@ class ConnectionAttr:
     @cached_property
     def is_nox_family(self):
         return 62001 <= self.port <= 63025
-
-    @cached_property
-    def is_vmos(self):
-        return 5667 <= self.port <= 5699
 
     @cached_property
     def is_emulator(self):

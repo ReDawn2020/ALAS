@@ -60,7 +60,6 @@ from module.config.utils import (
 from module.config.utils import time_delta
 from module.log_res.log_res import LogRes
 from module.logger import logger
-from module.notify import handle_notify
 from module.ocr.rpc import start_ocr_server_process, stop_ocr_server_process
 from module.submodule.submodule import load_config
 from module.submodule.utils import get_config_mod
@@ -367,29 +366,6 @@ class AlasGUI(Frame):
             color="navigator",
         )
 
-    def one_click_clear_all_task(self):
-        def clear_all_task():
-            close_popup()
-
-            task_scheduler_list = [f"{i.command}.Scheduler.Enable" for i in
-                                   [*self.alas_config.waiting_task, *self.alas_config.pending_task,
-                                    self.alas_config.task]]
-            modified = dict(zip(task_scheduler_list, [[] for _ in range(len(task_scheduler_list))]))
-
-            self._save_config(modified, self.alas_config.config_name, load_config(self.alas_config.config_name))
-
-        with popup(t("Gui.Text.ClearAllTaskConfirm")):
-            put_buttons(
-                buttons=[
-                    {"label": t("Gui.Button.Confirm"), "value": "", "color": "primary"},
-                    {"label": t("Gui.Button.Cancel"), "value": "", "color": "danger"},
-                ],
-                onclick=[
-                    clear_all_task,
-                    close_popup,
-                ],
-            )
-
     @use_scope("content", clear=True)
     def alas_overview(self) -> None:
         self.init_menu(name="Overview")
@@ -403,11 +379,6 @@ class AlasGUI(Frame):
                 [
                     put_text(t("Gui.Overview.Scheduler")).style(
                         "font-size: 1.25rem; margin: auto .5rem auto;"
-                    ),
-                    put_button(
-                        label=t("Gui.Button.OneClickClear"),
-                        onclick=self.one_click_clear_all_task,
-                        color="on",
                     ),
                     put_scope("scheduler_btn"),
                 ],
@@ -1308,7 +1279,7 @@ class AlasGUI(Frame):
 
     def run(self) -> None:
         # setup gui
-        set_env(title="AlasGG", output_animation=False)
+        set_env(title="Alas", output_animation=False)
         add_css(filepath_css("alas"))
         if self.is_mobile:
             add_css(filepath_css("alas-mobile"))
@@ -1595,52 +1566,6 @@ def clearup():
     logger.info("Alas closed.")
 
 
-g_instance_watcher: threading.Thread = None
-g_instance_restart_too_many_times: List[str] = list()
-
-def instance_watcher_thread():
-    global g_instance_restart_too_many_times
-    while 1:
-        time.sleep(10)
-        try:
-            for instance in alas_instance():
-                ins = ProcessManager.get_manager(instance)
-                config = AzurLaneConfig(ins.config_name)
-
-                enabled = deep_get(config.data, "Restart.InstanceRestart.Enabled", False)
-
-                if enabled and ins.state == 3 and not ins.alive:
-                    attempts = deep_get(config.data, "Restart.InstanceRestart.AttemptsToRestart", 3)
-                    has_restarted = deep_get(config.data, "Restart.InstanceRestart.HasRestarted", 0)
-                    enable_notify = deep_get(config.data, "Restart.InstanceRestart.NotifyWhenAutoRestart", False)
-                    push_config = deep_get(config.data, "Alas.Error.OnePushConfig")
-
-                    if has_restarted <= attempts and ins.config_name not in g_instance_restart_too_many_times:
-                        ins.start("alas")
-                        config.modified["Restart.InstanceRestart.HasRestarted"] = has_restarted + 1
-                        config.save()
-
-                        if enable_notify:
-                            handle_notify(
-                                push_config,
-                                title=f"Alas <{ins.config_name}> instance auto restarted",
-                                content=f"Critical error occurred, instance restarted",
-                            )
-                    else:
-                        if ins.config_name not in g_instance_restart_too_many_times:
-                            g_instance_restart_too_many_times.append(ins.config_name)
-                            config.modified["Restart.InstanceRestart.HasRestarted"] = 0
-                            config.save()
-                            g_instance_restart_too_many_times.append(ins.config_name)
-                            handle_notify(
-                                push_config,
-                                title=f"Alas <{ins.config_name}> instance restarted too many times",
-                                content=f"Too many critical error occurred, instance restarted too many times",
-                            )
-        except:
-            ...
-
-
 def app():
     parser = argparse.ArgumentParser(description="Alas web service")
     parser.add_argument(
@@ -1679,11 +1604,6 @@ def app():
     logger.attr("Password", True if key else False)
     logger.attr("CDN", cdn)
     logger.attr("IS_ON_PHONE_CLOUD", IS_ON_PHONE_CLOUD)
-
-    global g_instance_watcher
-    if g_instance_watcher is None:
-        g_instance_watcher = threading.Thread(target=instance_watcher_thread)
-        g_instance_watcher.start()
 
     def index():
         if key is not None and not login(key):

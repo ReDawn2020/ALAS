@@ -161,11 +161,7 @@ class CampaignStatus(UI):
         tasks = [
             'Event',
             'Event2',
-            'Event3',
-            'coalition',
-            'coalition_sp',
             'Raid',
-            'Coalition',
             'GemsFarming',
         ]
         command = self.config.Scheduler_Command

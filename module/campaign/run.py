@@ -14,8 +14,7 @@ from module.handler.fast_forward import map_files, to_map_file_name
 from module.logger import logger
 from module.notify import handle_notify
 from module.ui.page import page_campaign
-from module.config.utils import deep_get, deep_set
-from datetime import datetime, timedelta
+
 
 class CampaignRun(CampaignEvent, ShopStatus):
     folder: str
@@ -61,9 +60,6 @@ class CampaignRun(CampaignEvent, ShopStatus):
             logger.critical(f'Possible reason #1: This event ({folder}) does not have {name}')
             logger.critical(f'Possible reason #2: You are using an old Alas, '
                             'please check for update, or make map files yourself using dev_tools/map_extractor.py')
-            if self.config.SERVER == 'cn':
-                logger.critical(f'Possible reason #3: 对于看不懂以上英文的用户，此处是友情翻译：'
-                            f'还没更新呢急你妈急急急急。要么给极彩阿丽艾塔上总督催更，要么滚回去自己写')
             raise RequestHumanTakeover
 
         config = copy.deepcopy(self.config).merge(self.module.Config())
@@ -320,14 +316,9 @@ class CampaignRun(CampaignEvent, ShopStatus):
             in: page_campaign
         """
         if self.campaign.commission_notice_show_at_campaign():
-            InfiniteDelayCommission = deep_get(self.config.data, "SomethingSpecial.InfiniteDelay.Commission")
-            if InfiniteDelayCommission:
-                logger.warning("Commission notice found, but skip to call task 'Commission' and delay it")
-                self.config.task_delay(target=datetime.now() + timedelta(hours=6, seconds=-1), task="Commission")
-            else:
-                logger.info('Commission notice found')
-                self.config.task_call('Commission', force_call=True)
-                self.config.task_stop('Commission notice found')
+            logger.info('Commission notice found')
+            self.config.task_call('Commission', force_call=True)
+            self.config.task_stop('Commission notice found')
 
     def run(self, name, folder='campaign_main', mode='normal', total=0):
         """
