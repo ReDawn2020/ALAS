@@ -62,58 +62,10 @@ class CampaignStatus(UI):
             LogRes(self.config).Pt = pt
         else:
             logger.warning(f'Invalid pt result: {pt}')
-<<<<<<< HEAD
             pt = 0
         self.config.update()
         return pt
     
-=======
-            return 0
-
-    def get_coin(self, skip_first_screenshot=True):
-        """
-        Returns:
-            int: Coin amount
-        """
-        amount = 0
-        timeout = Timer(1, count=2).start()
-        while 1:
-            if skip_first_screenshot:
-                skip_first_screenshot = False
-            else:
-                self.device.screenshot()
-
-            if timeout.reached():
-                logger.warning('Get coin timeout')
-                break
-
-            amount = OCR_COIN.ocr(self.device.image)
-            if amount >= 100:
-                break
-
-        return amount
-
-    def _get_oil(self):
-        # Update offset
-        _ = self.appear(OCR_OIL_CHECK)
-
-        color = get_color(self.device.image, OCR_OIL_CHECK.button)
-        if color_similar(color, OCR_OIL_CHECK.color):
-            # Original color
-            if server.server != 'jp':
-                ocr = Digit(OCR_OIL, name='OCR_OIL', letter=(247, 247, 247), threshold=128)
-            else:
-                ocr = Digit(OCR_OIL, name='OCR_OIL', letter=(201, 201, 201), threshold=128)
-        elif color_similar(color, (59, 59, 64)):
-            # With black overlay
-            ocr = Digit(OCR_OIL, name='OCR_OIL', letter=(165, 165, 165), threshold=128)
-        else:
-            logger.warning(f'Unexpected OCR_OIL_CHECK color')
-            ocr = Digit(OCR_OIL, name='OCR_OIL', letter=(247, 247, 247), threshold=128)
-
-        return ocr.ocr(self.device.image)
-
->>>>>>> 4da606ff3b4bcbdf2e797f615adfd08515e7ecaf
     def get_oil(self, skip_first_screenshot=True):
         """
         Returns:
