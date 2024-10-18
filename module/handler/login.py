@@ -26,7 +26,7 @@ class LoginHandler(UI):
             in: Any page
             out: page_main
         """
-        logger.hr('App login')
+        logger.hr('Game login')
 
         confirm_timer = Timer(1.5, count=4).start()
         orientation_timer = Timer(5)
@@ -86,7 +86,7 @@ class LoginHandler(UI):
             # Always goto page_main
             if self.appear_then_click(GOTO_MAIN, offset=(30, 30), interval=5):
                 continue
-
+        
         return True
 
     _user_agreement_timer = Timer(1, count=2)
@@ -130,6 +130,8 @@ class LoginHandler(UI):
             self.device.stuck_record_clear()
             self.device.click_record_clear()
             try:
+                from module.gg_manager.gg_manager import GGManager
+                GGManager(self.config, self.device).handle_restart()
                 self._handle_app_login()
                 return True
             except (GameTooManyClickError, GameStuckError) as e:
@@ -140,25 +142,37 @@ class LoginHandler(UI):
 
         logger.critical('Login failed more than 3')
         logger.critical('Azur Lane server may be under maintenance, or you may lost network connection')
-        raise RequestHumanTakeover
+        raise GameStuckError
 
     def app_stop(self):
-        logger.hr('App stop')
+        logger.hr('Game stop')
         self.device.app_stop()
 
     def app_start(self):
-        logger.hr('App start')
+        logger.hr('Game start')
         self.device.app_start()
         self.handle_app_login()
         # self.ensure_no_unfinished_campaign()
 
     def app_restart(self):
-        logger.hr('App restart')
+        logger.hr('Game restart')
         self.device.app_stop()
+        from module.gg_manager.gg_screenshot import GGScreenshot
+        GGScreenshot(config=self.config, device=self.device).gg_stop()
+        self.device.sleep(2)
         self.device.app_start()
         self.handle_app_login()
         # self.ensure_no_unfinished_campaign()
         self.config.task_delay(server_update=True)
+
+    def app_restart_gg(self):
+        logger.hr('Game restart')
+        self.device.app_stop()
+        from module.gg_manager.gg_screenshot import GGScreenshot
+        GGScreenshot(config=self.config, device=self.device).gg_stop()
+        self.device.sleep(2)
+        self.device.app_start()
+        self.handle_app_login()
 
     def ensure_no_unfinished_campaign(self, confirm_wait=3):
         """
@@ -225,7 +239,8 @@ class LoginHandler(UI):
                 XPS('//*[@content-desc="请滑动阅读协议内容"]', xp, hierarchy)])
 
             test_image_original = self.device.image
-            image_handle_crop = crop(test_image_original, (start_padding_results[2], 0, start_margin_results[2], 720))
+            image_handle_crop = crop(
+                test_image_original, (start_padding_results[2], 0, start_margin_results[2], 720), copy=False)
             # Image.fromarray(image_handle_crop).show()
             sims = color_similarity_2d(image_handle_crop, color=(182, 189, 202))
             points = np.sum(sims >= 255)

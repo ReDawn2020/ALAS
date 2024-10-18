@@ -157,3 +157,8 @@ Deploy:
     # '["alas"]' specified "alas" config
     # '["alas","alas2"]' specified "alas" "alas2" configs
     Run: null
+    # To update app.asar
+    # 'true' default, use lme
+    # 'false' use me
+    # 'null' disable autoupdate
+    AppAsarUpdate: true

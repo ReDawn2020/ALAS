@@ -7,6 +7,7 @@ from module.config.utils import DEFAULT_TIME
 from module.logger import logger
 from module.ui.assets import CAMPAIGN_MENU_NO_EVENT
 from module.ui.page import page_event, page_campaign_menu, page_sp, page_coalition
+from module.war_archives.assets import WAR_ARCHIVES_CAMPAIGN_CHECK
 
 
 class CampaignEvent(CampaignStatus):
@@ -47,16 +48,14 @@ class CampaignEvent(CampaignStatus):
         )
         tasks = EVENTS + RAIDS + COALITIONS + GEMS_FARMINGS
         command = self.config.Scheduler_Command
-        if limit <= 0 or command not in tasks:
-            self.get_event_pt()
+        if limit < 0 or command not in tasks:
             return False
         if command == 'GemsFarming' and self.stage_is_main(self.config.Campaign_Name):
-            self.get_event_pt()
             return False
 
         pt = self.get_event_pt()
-        logger.attr('Event_PT_limit', f'{pt}/{limit}')
-        if pt >= limit:
+        if pt >= limit and limit > 0:
+            logger.attr('Event_PT_limit', f'{pt}/{limit}')
             logger.hr(f'Reach event PT limit: {limit}')
             self._disable_tasks(tasks)
             return True
@@ -95,17 +94,9 @@ class CampaignEvent(CampaignStatus):
         Pages:
             in: page_event or page_sp
         """
-        from module.config.utils import deep_get
         limit = self.config.TaskBalancer_CoinLimit
-        coin = deep_get(self.config.data, 'Dashboard.Coin.Value')
+        coin = self._get_coin()
         logger.attr('Coin Count', coin)
-        tasks = [
-            'Event',
-            'Event2',
-            'Raid',
-            'GemsFarming',
-        ]
-        command = self.config.Scheduler_Command
         # Check Coin
         if coin == 0:
             # Avoid wrong/zero OCR result
@@ -122,12 +113,11 @@ class CampaignEvent(CampaignStatus):
                 return False
 
     def handle_task_balancer(self):
-        if self.config.TaskBalancer_Enable and self.triggered_task_balancer():
-            self.config.task_delay(minute=5)
-            next_task = self.config.TaskBalancer_TaskCall
-            logger.hr(f'TaskBalancer triggered, switching task to {next_task}')
-            self.config.task_call(next_task)
-            self.config.task_stop()
+        self.config.task_delay(minute=5)
+        next_task = self.config.TaskBalancer_TaskCall
+        logger.hr(f'TaskBalancer triggered, switching task to {next_task}')
+        self.config.task_call(next_task)
+        self.config.task_stop()
 
     def is_event_entrance_available(self):
         """
@@ -149,26 +139,32 @@ class CampaignEvent(CampaignStatus):
     def ui_goto_event(self):
         # Already in page_event, skip event_check.
         if self.ui_get_current_page() == page_event:
-            logger.info('Already at page_event')
-            return True
-        else:
-            self.ui_goto(page_campaign_menu)
-            # Check event availability
-            if self.is_event_entrance_available():
-                self.ui_goto(page_event)
+            if self.appear(WAR_ARCHIVES_CAMPAIGN_CHECK, offset=(20, 20)):
+                logger.info('At war archives')
+                self.ui_goto_main()
+            else:
+                logger.info('Already at page_event')
                 return True
+        self.ui_goto(page_campaign_menu)
+        # Check event availability
+        if self.is_event_entrance_available():
+            self.ui_goto(page_event)
+            return True
 
     def ui_goto_sp(self):
         # Already in page_event, skip event_check.
         if self.ui_get_current_page() == page_sp:
-            logger.info('Already at page_sp')
-            return True
-        else:
-            self.ui_goto(page_campaign_menu)
-            # Check event availability
-            if self.is_event_entrance_available():
-                self.ui_goto(page_sp)
+            if self.appear(WAR_ARCHIVES_CAMPAIGN_CHECK, offset=(20, 20)):
+                logger.info('At war archives')
+                self.ui_goto_main()
+            else:
+                logger.info('Already at page_sp')
                 return True
+        self.ui_goto(page_campaign_menu)
+        # Check event availability
+        if self.is_event_entrance_available():
+            self.ui_goto(page_sp)
+            return True
 
     def ui_goto_coalition(self):
         # Already in page_event, skip event_check.

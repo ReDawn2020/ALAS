@@ -96,10 +96,11 @@ class CampaignRun(CampaignEvent, ShopStatus):
             return True
         # Oil limit
         if oil_check:
+            # Gem limit
             self.status_get_gems()
+            # Coin limit
             self.get_coin()
-            _oil = self.get_oil()
-            if _oil < max(500, self.config.StopCondition_OilLimit):
+            if self.get_oil() < max(500, self.config.StopCondition_OilLimit):
                 logger.hr('Triggered stop condition: Oil limit')
                 self.config.task_delay(minute=(120, 240))
                 return True
@@ -243,6 +244,8 @@ class CampaignRun(CampaignEvent, ShopStatus):
             'event_20211125_cn',
             'event_20231026_cn',
             'event_20231123_cn',
+            'event_20240725_cn',
+            'event_20240829_cn',
         ]:
             name = convert.get(name, name)
         else:
@@ -272,6 +275,10 @@ class CampaignRun(CampaignEvent, ShopStatus):
         if folder == 'event_20230817_cn':
             if name.startswith('e0'):
                 name = 'a1'
+        # event_20240829_cn, TP -> SP
+        if folder == 'event_20240829_cn':
+            if name == 'tp':
+                name = 'sp'
         # Stage loop
         for alias, stages in self.config.STAGE_LOOP_ALIAS.items():
             alias_folder, alias = alias
@@ -365,7 +372,7 @@ class CampaignRun(CampaignEvent, ShopStatus):
                     logger.info('In auto search menu, skip ensure_campaign_ui.')
                 else:
                     logger.info('In auto search menu, closing.')
-                    self.campaign.ensure_auto_search_exit()
+                    # Because event_20240725 task balancer delete self.campaign.ensure_auto_search_exit()
                     self.campaign.ensure_campaign_ui(name=self.stage, mode=mode)
             else:
                 self.campaign.ensure_campaign_ui(name=self.stage, mode=mode)
@@ -384,11 +391,6 @@ class CampaignRun(CampaignEvent, ShopStatus):
             if self.triggered_stop_condition(oil_check=not self.campaign.is_in_auto_search_menu()):
                 break
 
-            # Update config
-            if len(self.config.modified):
-                logger.info('Updating config for dashboard')
-                self.config.update()
-
             # Run
             self.device.stuck_record_clear()
             self.device.click_record_clear()
@@ -401,8 +403,9 @@ class CampaignRun(CampaignEvent, ShopStatus):
 
             # Update config
             if len(self.campaign.config.modified):
-                logger.info('Updating config for dashboard')
+                logger.info('Updating dashboard data')
                 self.campaign.config.update()
+
             # After run
             self.run_count += 1
             if self.config.StopCondition_RunCount:

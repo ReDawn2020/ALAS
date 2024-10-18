@@ -105,8 +105,9 @@ class FastForwardHandler(AutoSearchHandler):
         'B1 > B2 > B3',
         'C1 > C2 > C3',
         'D1 > D2 > D3',
-        'SP1 > SP2 > SP3 > SP4',
+        'SP1 > SP2 > SP3 > SP4 > SP5',
         'T1 > T2 > T3 > T4',
+        'HT1 > HT2 > HT3 > HT4',
     ]
     map_fleet_checked = False
 
@@ -245,7 +246,22 @@ class FastForwardHandler(AutoSearchHandler):
 
         logger.info('Auto search setting')
         self.fleet_preparation_sidebar_ensure(3)
-        self.auto_search_setting_ensure(self.config.Fleet_FleetOrder)
+        if not self.auto_search_setting_ensure(self.config.Fleet_FleetOrder):
+            if self.config.task.command == 'GemsFarming' and self.config.GemsFarming_StopIFAutoNotEnsured:
+                from module.notify import handle_notify
+                if not handle_notify(
+                    self.config.Error_OnePushConfig,
+                    title=f"Alas <{self.config.config_name}> crashed(崩溃了)",
+                    content=f"<{self.config.config_name}> RequestHumanTakeover(需要手动介入)\n"
+                            f"Task GemsFarming could not set auto search settings(任务无法设置自动搜索设置)",
+                            ):
+                    from module.exception import AutoSearchSetError
+                    raise AutoSearchSetError
+                self.config.modified['GemsFarming.Scheduler.Enable'] = False
+                self.config.update()
+                logger.critical('Auto search could not be ensured.')
+                logger.critical('Close Task: GemsFarming')
+                self.config.task_stop('Auto search could not be ensured.')
         if self.config.SUBMARINE:
             self.auto_search_setting_ensure(self.config.Submarine_AutoSearchMode)
         return True
@@ -406,7 +422,7 @@ class FastForwardHandler(AutoSearchHandler):
                 or 2x book setting is absent
 
         """
-        confirm_timer = Timer(1).start()
+        confirm_timer = Timer(0.3, count=1).start()
         clicked_threshold = 0
         while 1:
             if skip_first_screenshot:

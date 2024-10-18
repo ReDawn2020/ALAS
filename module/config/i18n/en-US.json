@@ -46,16 +46,20 @@
       "name": "Restart",
       "help": ""
     },
+    "MainNormal": {
+      "name": "MainNormal",
+      "help": ""
+    },
+    "MainHard": {
+      "name": "MainHard",
+      "help": ""
+    },
     "Main": {
       "name": "Main",
       "help": ""
     },
     "Main2": {
       "name": "Main-2",
-      "help": ""
-    },
-    "Main3": {
-      "name": "Main-3",
       "help": ""
     },
     "GemsFarming": {
@@ -74,12 +78,16 @@
       "name": "Event-2",
       "help": ""
     },
+    "Event3": {
+      "name": "Event-3",
+      "help": "Task.Event3.help"
+    },
     "Raid": {
       "name": "Raid",
       "help": ""
     },
     "Coalition": {
-      "name": "Frostfall",
+      "name": "Little Academy",
       "help": ""
     },
     "MaritimeEscort": {
@@ -115,7 +123,7 @@
       "help": ""
     },
     "CoalitionSp": {
-      "name": "Frostfall Daily SP",
+      "name": "Little Academy SP",
       "help": ""
     },
     "Commission": {
@@ -182,16 +190,20 @@
       "name": "Minigame",
       "help": "Receive credits and spend them"
     },
+    "DashboardUpdate": {
+      "name": "Dashboard Update",
+      "help": ""
+    },
     "OpsiGeneral": {
       "name": "OpSi General",
       "help": ""
     },
     "OpsiAshBeacon": {
-      "name": "Ash Beacon",
+      "name": "META Battles",
       "help": ""
     },
     "OpsiAshAssist": {
-      "name": "OpSi Ash Assist",
+      "name": "META Assists",
       "help": ""
     },
     "OpsiExplore": {
@@ -261,234 +273,10 @@
     "GameManager": {
       "name": "Game Manager(WIP)",
       "help": ""
-    }
-  },
-  "Oil": {
-    "_info": {
-      "name": "Oil._info.name",
-      "help": "Oil._info.help"
     },
-    "Value": {
-      "name": "Oil.Value.name",
-      "help": "Oil.Value.help"
-    },
-    "Limit": {
-      "name": "Oil.Limit.name",
-      "help": "Oil.Limit.help"
-    },
-    "Color": {
-      "name": "Oil.Color.name",
-      "help": "Oil.Color.help"
-    },
-    "Record": {
-      "name": "Oil.Record.name",
-      "help": "Oil.Record.help"
-    }
-  },
-  "Coin": {
-    "_info": {
-      "name": "Coin._info.name",
-      "help": "Coin._info.help"
-    },
-    "Value": {
-      "name": "Coin.Value.name",
-      "help": "Coin.Value.help"
-    },
-    "Limit": {
-      "name": "Coin.Limit.name",
-      "help": "Coin.Limit.help"
-    },
-    "Color": {
-      "name": "Coin.Color.name",
-      "help": "Coin.Color.help"
-    },
-    "Record": {
-      "name": "Coin.Record.name",
-      "help": "Coin.Record.help"
-    }
-  },
-  "Gem": {
-    "_info": {
-      "name": "Gem._info.name",
-      "help": "Gem._info.help"
-    },
-    "Value": {
-      "name": "Gem.Value.name",
-      "help": "Gem.Value.help"
-    },
-    "Color": {
-      "name": "Gem.Color.name",
-      "help": "Gem.Color.help"
-    },
-    "Record": {
-      "name": "Gem.Record.name",
-      "help": "Gem.Record.help"
-    }
-  },
-  "Pt": {
-    "_info": {
-      "name": "Pt._info.name",
-      "help": "Pt._info.help"
-    },
-    "Value": {
-      "name": "Pt.Value.name",
-      "help": "Pt.Value.help"
-    },
-    "Color": {
-      "name": "Pt.Color.name",
-      "help": "Pt.Color.help"
-    },
-    "Record": {
-      "name": "Pt.Record.name",
-      "help": "Pt.Record.help"
-    }
-  },
-  "YellowCoin": {
-    "_info": {
-      "name": "YellowCoin._info.name",
-      "help": "YellowCoin._info.help"
-    },
-    "Value": {
-      "name": "YellowCoin.Value.name",
-      "help": "YellowCoin.Value.help"
-    },
-    "Color": {
-      "name": "YellowCoin.Color.name",
-      "help": "YellowCoin.Color.help"
-    },
-    "Record": {
-      "name": "YellowCoin.Record.name",
-      "help": "YellowCoin.Record.help"
-    }
-  },
-  "PurpleCoin": {
-    "_info": {
-      "name": "PurpleCoin._info.name",
-      "help": "PurpleCoin._info.help"
-    },
-    "Value": {
-      "name": "PurpleCoin.Value.name",
-      "help": "PurpleCoin.Value.help"
-    },
-    "Color": {
-      "name": "PurpleCoin.Color.name",
-      "help": "PurpleCoin.Color.help"
-    },
-    "Record": {
-      "name": "PurpleCoin.Record.name",
-      "help": "PurpleCoin.Record.help"
-    }
-  },
-  "ActionPoint": {
-    "_info": {
-      "name": "ActionPoint._info.name",
-      "help": "ActionPoint._info.help"
-    },
-    "Value": {
-      "name": "ActionPoint.Value.name",
-      "help": "ActionPoint.Value.help"
-    },
-    "Total": {
-      "name": "ActionPoint.Total.name",
-      "help": "ActionPoint.Total.help"
-    },
-    "Color": {
-      "name": "ActionPoint.Color.name",
-      "help": "ActionPoint.Color.help"
-    },
-    "Record": {
-      "name": "ActionPoint.Record.name",
-      "help": "ActionPoint.Record.help"
-    }
-  },
-  "Merit": {
-    "_info": {
-      "name": "Merit._info.name",
-      "help": "Merit._info.help"
-    },
-    "Value": {
-      "name": "Merit.Value.name",
-      "help": "Merit.Value.help"
-    },
-    "Color": {
-      "name": "Merit.Color.name",
-      "help": "Merit.Color.help"
-    },
-    "Record": {
-      "name": "Merit.Record.name",
-      "help": "Merit.Record.help"
-    }
-  },
-  "Cube": {
-    "_info": {
-      "name": "Cube._info.name",
-      "help": "Cube._info.help"
-    },
-    "Value": {
-      "name": "Cube.Value.name",
-      "help": "Cube.Value.help"
-    },
-    "Color": {
-      "name": "Cube.Color.name",
-      "help": "Cube.Color.help"
-    },
-    "Record": {
-      "name": "Cube.Record.name",
-      "help": "Cube.Record.help"
-    }
-  },
-  "Core": {
-    "_info": {
-      "name": "Core._info.name",
-      "help": "Core._info.help"
-    },
-    "Value": {
-      "name": "Core.Value.name",
-      "help": "Core.Value.help"
-    },
-    "Color": {
-      "name": "Core.Color.name",
-      "help": "Core.Color.help"
-    },
-    "Record": {
-      "name": "Core.Record.name",
-      "help": "Core.Record.help"
-    }
-  },
-  "Medal": {
-    "_info": {
-      "name": "Medal._info.name",
-      "help": "Medal._info.help"
-    },
-    "Value": {
-      "name": "Medal.Value.name",
-      "help": "Medal.Value.help"
-    },
-    "Color": {
-      "name": "Medal.Color.name",
-      "help": "Medal.Color.help"
-    },
-    "Record": {
-      "name": "Medal.Record.name",
-      "help": "Medal.Record.help"
-    }
-  },
-  "GuildCoin": {
-    "_info": {
-      "name": "GuildCoin._info.name",
-      "help": "GuildCoin._info.help"
-    },
-    "Value": {
-      "name": "GuildCoin.Value.name",
-      "help": "GuildCoin.Value.help"
-    },
-    "Color": {
-      "name": "GuildCoin.Color.name",
-      "help": "GuildCoin.Color.help"
-    },
-    "Record": {
-      "name": "GuildCoin.Record.name",
-      "help": "GuildCoin.Record.help"
+    "GGManager": {
+      "name": "Task.GGManager.name",
+      "help": "Task.GGManager.help"
     }
   },
   "Scheduler": {
@@ -585,6 +373,8 @@
       "cn_android-21": "[国服] 莱茵河卫兵",
       "cn_android-22": "[国服] 北极光计划",
       "cn_android-23": "[国服] 长戟计划",
+      "cn_android-24": "[国服] 暴雨行动",
+      "cn_android-25": "[国服] 水仙行动",
       "cn_ios-0": "[国服] 夏威夷",
       "cn_ios-1": "[国服] 珊瑚海",
       "cn_ios-2": "[国服] 中途岛",
@@ -638,7 +428,8 @@
       "DroidCast": "DroidCast",
       "DroidCast_raw": "DroidCast_raw",
       "scrcpy": "scrcpy",
-      "nemu_ipc": "nemu_ipc"
+      "nemu_ipc": "nemu_ipc",
+      "ldopengl": "ldopengl"
     },
     "ControlMethod": {
       "name": "Control Method",
@@ -888,6 +679,7 @@
       "help": "Automatically selects to the latest event",
       "campaign_main": "campaign_main",
       "coalition_20230323": "Frostfall",
+      "coalition_20240627": "Welcome to Little Academy",
       "event_20200227_cn": "Northern Overture",
       "event_20200312_cn": "The Solomon Ranger Rerun",
       "event_20200326_cn": "Microlayer Medley",
@@ -935,8 +727,8 @@
       "event_20220324_cn": "Virtual Tower Rerun",
       "event_20220407_tw": "蒼紅的迴響(復刻)",
       "event_20220414_cn": "Aurora Noctis Rerun",
-      "event_20220428_cn": "Rondo at Rainbows End",
-      "event_20220526_cn": "Pledge of the Radiant Court",
+      "event_20220428_cn": "Rondo at Rainbows End Rerun",
+      "event_20220526_cn": "Pledge of the Radiant Court Rerun",
       "event_20220728_cn": "Aquilifers Ballade",
       "event_20220818_cn": "Operation Convergence",
       "event_20220915_cn": "Violet Tempest Blooming Lycoris",
@@ -953,6 +745,10 @@
       "event_20240229_cn": "Snowrealm Peregrination",
       "event_20240425_cn": "Heart-Linking Harmony",
       "event_20240521_cn": "Light of the Martyrium",
+      "event_20240725_cn": "Interlude of Illusions",
+      "event_20240815_cn": "Windborne Steel Wings",
+      "event_20240829_cn": "Whence Flowers Bear No Fruit",
+      "event_20240912_cn": "Ode of Everblooming Crimson",
       "raid_20200624": "Air Raid Drills with Essex Rerun",
       "raid_20210708": "Cross Wave rerun",
       "raid_20220127": "Mystery Investigation",
@@ -1038,9 +834,9 @@
       "help": "Stop current task if level has been 100% Clear, 3 Stars, Threat Safe, or Threat Safe without 3 Stars. Non-stop implies no achievement requirement and loops until different stop condition is met",
       "non_stop": "Non-stop",
       "100_percent_clear": "100% Clear",
+      "threat_safe_without_3_stars": "100% Clear + Threat Safe",
       "map_3_stars": "100% Clear + 3 Stars",
-      "threat_safe": "100% Clear + 3 Stars + Threat Safe",
-      "threat_safe_without_3_stars": "100% Clear + Threat Safe"
+      "threat_safe": "100% Clear + 3 Stars + Threat Safe"
     },
     "StageIncrease": {
       "name": "Enable Continuous Clear",
@@ -1078,7 +874,7 @@
       "diamond": "diamond"
     },
     "Fleet1Mode": {
-      "name": "Fleet 1 Mode",
+      "name": "Fleet1 Action Mode",
       "help": "",
       "combat_auto": "combat_auto",
       "combat_manual": "combat_manual",
@@ -1112,7 +908,7 @@
       "diamond": "diamond"
     },
     "Fleet2Mode": {
-      "name": "Fleet 2 Mode",
+      "name": "Fleet2 Action Mode",
       "help": "",
       "combat_auto": "combat_auto",
       "combat_manual": "combat_manual",
@@ -1374,7 +1170,7 @@
     },
     "ChangeVanguard": {
       "name": "Change Vanguard",
-      "help": "Change vanguard if flagship or vanguard are emotion exhausted.If you choose not to change, your fleet will ignore the low emotion warning and continue combat.\nSwitch out to new level 100(70) common vanguard after current flagship has reached level 32+ (Only CN players'0 limit break ship can reach level 100)\n\nThe vanguard's equipment is replaced when being switched out by first recording the current setup. Only populated equipment slots will be replaced.",
+      "help": "Change vanguard if flagship or vanguard are emotion exhausted. If you choose not to change, your fleet will ignore the low emotion warning and continue combat.\nSwitch out to new level 100(70) common vanguard from eagle or ironblood after current flagship has reached level 32+ (Only CN players'0 limit break ship can reach level 100)\n\nThe vanguard's equipment is replaced when being switched out by first recording the current setup. Only populated equipment slots will be replaced.",
       "disabled": "Don't Change",
       "ship": "Change Ship",
       "ship_equip": "Change Ship + Gears"
@@ -1383,8 +1179,10 @@
       "name": "Flagship Common DD Preference",
       "help": "",
       "any": "any",
-      "aulick_or_foote": "aulick or foote",
-      "cassin_or_downes": "cassin or downes"
+      "favourite": "Favourite Ships Only",
+      "aulick_or_foote": "Aulick or Foote",
+      "cassin_or_downes": "Cassin or Downes",
+      "z20_or_z21": "Z20 or Z21"
     },
     "CommissionLimit": {
       "name": "Prevent Too Many Urgent Commissions",
@@ -1402,7 +1200,7 @@
     },
     "TimeLimit": {
       "name": "Event Time Limit",
-      "help": "When the local time exceeds the given value, disable all event tasks. '2020-01-01 00:00:00' means no limit and the time will be reset once it's triggered\nThis can prevent the occurrence of forgetting to disable event tasks after the event ends"
+      "help": "When the local time exceeds the given value, disable all event tasks. '2023-01-01 00:00:00' means no limit and the time will be reset once it's triggered\nThis can prevent the occurrence of forgetting to disable event tasks after the event ends"
     }
   },
   "TaskBalancer": {
@@ -1421,9 +1219,10 @@
     "TaskCall": {
       "name": "Call task X if out of coin",
       "help": "Reminder: Players need to check task config before running, or TaskCall may not work.",
+      "MainNormal": "MainNormal",
+      "MainHard": "MainHard",
       "Main": "Main",
-      "Main2": "Main-2",
-      "Main3": "Main-3"
+      "Main2": "Main-2"
     }
   },
   "EventDaily": {
@@ -1482,6 +1281,14 @@
     "_info": {
       "name": "Event Settings",
       "help": "Fleets must be prepared manually in game before running"
+    },
+    "Mode": {
+      "name": "Mode",
+      "help": "SP needs to use event daily SP to run",
+      "easy": "Easy",
+      "normal": "Normal",
+      "hard": "Hard",
+      "ex": "EX"
     },
     "Fleet": {
       "name": "Fleet",
@@ -1610,6 +1417,9 @@
       "name": "Preset Filter Select",
       "help": "See research drops rates and spawn rates in https://azur-stats.lyoko.io/. People without a basic knowledge of these are recommended to use pre-optimized presets instead of writing custom filters",
       "custom": "custom",
+      "series_7_blueprint_la9": "Series 7 Blueprints+La9",
+      "series_7_blueprint_only": "Series 7 Blueprints Only",
+      "series_7_la9_only": "Series 7 La9 Only",
       "series_6_blueprint_203": "Series 6 Blueprints+203",
       "series_6_blueprint_only": "Series 6 Blueprints Only",
       "series_6_203_only": "Series 6 203 Only",
@@ -2140,15 +1950,19 @@
       "name": "Mail Settings",
       "help": ""
     },
-    "Collect": {
-      "name": "Collect Mail Rewards",
-      "help": "Only collects the top 3 mail entries"
+    "ClaimMerit": {
+      "name": "Claim Merit Mails",
+      "help": ""
     },
-    "Filter": {
-      "name": "Mail Filter",
-      "help": "Filter as to which mail types should be collected\nSupports Merit, Coolant, Coin, DecorCoin, Cube, Oil, and/or Gem"
+    "ClaimMaintenance": {
+      "name": "Claim Maintenance Mails",
+      "help": "Mail.ClaimMaintenance.help"
     },
-    "Delete": {
+    "ClaimTradeLicense": {
+      "name": "Claim Trade License Mails",
+      "help": ""
+    },
+    "DeleteCollected": {
       "name": "Delete Collected Mail Rewards",
       "help": "Delete the already collected mail entries\nMark any entries \"important\" in-game to avoid accidental deletion"
     }
@@ -2182,6 +1996,16 @@
     "Collect": {
       "name": "Enable",
       "help": ""
+    }
+  },
+  "DashboardUpdate": {
+    "_info": {
+      "name": "DashboardUpdate._info.name",
+      "help": "DashboardUpdate._info.help"
+    },
+    "Update": {
+      "name": "DashboardUpdate.Update.name",
+      "help": "DashboardUpdate.Update.help"
     }
   },
   "Daily": {
@@ -2318,8 +2142,8 @@
       "help": "11-4, 12-2, 12-4, and etc."
     },
     "HardFleet": {
-      "name": "Hard Fleet",
-      "help": "Must in game manually set up the fleet and ensure level attribute restrictions are satisfied",
+      "name": "Hard.HardFleet.name",
+      "help": "Hard.HardFleet.help",
       "1": "1",
       "2": "2"
     }
@@ -2390,7 +2214,7 @@
   },
   "OpsiAshAssist": {
     "_info": {
-      "name": "OpSi Ash Assist Settings",
+      "name": "META Assist Settings",
       "help": "Limited to 3 everyday"
     },
     "Tier": {
@@ -2436,11 +2260,11 @@
   },
   "OpsiAshBeacon": {
     "_info": {
-      "name": "Ash Beacon Settings",
+      "name": "META Battle Settings",
       "help": ""
     },
     "AttackMode": {
-      "name": "META Attack",
+      "name": "META Battle",
       "help": "",
       "current": "Current",
       "current_dossier": "Current + Dossier"
@@ -2450,8 +2274,8 @@
       "help": "Strike each beacon only once, then call for support every half hour thereafter\nNot effective in META dossiers"
     },
     "DossierAutoAttackMode": {
-      "name": "OpsiAshBeacon.DossierAutoAttackMode.name",
-      "help": "OpsiAshBeacon.DossierAutoAttackMode.help"
+      "name": "Use Auto Attack Mode in META Dossier",
+      "help": "Use Auto Attack Mode after the first battle, currently only available on CN"
     },
     "RequestAssist": {
       "name": "Request Assists",
@@ -2485,6 +2309,14 @@
       "3": "3",
       "4": "4"
     },
+    "FleetMode": {
+      "name": "Action Mode",
+      "help": "",
+      "combat_auto": "combat_auto",
+      "combat_manual": "combat_manual",
+      "stand_still_in_the_middle": "stand_still_in_the_middle",
+      "hide_in_bottom_left": "hide_in_bottom_left"
+    },
     "Submarine": {
       "name": "Call Submarine",
       "help": "If enabled, interval increases from 30 to 60 minutes instead"
@@ -2511,11 +2343,20 @@
   "OpsiShop": {
     "_info": {
       "name": "OpSi Shop Settings",
-      "help": "Completes OpSi daily activities\nThe following must be satisfied:\n- OpSi story and practice battles must be complete\n- Task OpSi Explore enabled or consuming 5000 oil for special radar in OpSi voucher shop"
+      "help": "Completes OpSi daily activities\nThe following must be satisfied:\n- OpSi story and practice battles must be complete\n- Task OpSi Explore enabled or consuming 5000 oil for special radar in OpSi voucher shop\nAvailable only in the next month after clearing OpSi story, i.e., after the port shop becomes a new version of the shop"
     },
-    "BuySupply": {
-      "name": "Buy From Port Shops",
-      "help": "Buy all items from port shops\nShop inventory consists of a fixed pool that is reset monthly, items not bought during a cycle has the chance of re-appearing and blocking preferable high value items"
+    "PresetFilter": {
+      "name": "OpSi Shop Filter",
+      "help": "Generally does not need to be modified. Use \"High value items and META material\"` if Voucher Coins spilled or \"Without META materials\" if you are newcomer.\nHigh value items include ActionPoint, Logger and T4 or higher items; META materials include METABook and META enhance materials.",
+      "max_benefit": "High value items",
+      "max_benefit_meta": "High value items and META materials",
+      "no_meta": "Not to buy META materials",
+      "all": "All",
+      "custom": "custom"
+    },
+    "CustomFilter": {
+      "name": "Custom Research Priority",
+      "help": "To use your own filter, set \"OpSi Shop Filter Select\" to \"custom\". All options have been defined at  <https://github.com/LmeSzinc/AzurLaneAutoScript/wiki/filter_string_en>"
     }
   },
   "OpsiVoucher": {
@@ -2681,7 +2522,14 @@
     },
     "Repository": {
       "name": "AzurLaneUncensored Repository",
-      "help": "Do not need to modify\nGithub: <https://github.com/LmeSzinc/AzurLaneUncensored>\nCN mirror: <https://e.coding.net/llop18870/alas/AzurLaneUncensored.git>"
+      "help": "Do not need to modify\nGithub: <https://github.com/LmeSzinc/AzurLaneUncensored>"
+    },
+    "Option": {
+      "name": "AzurLaneUncensored.Option.name",
+      "help": "AzurLaneUncensored.Option.help",
+      "all": "all",
+      "main": "main",
+      "only_patch": "only_patch"
     }
   },
   "GameManager": {
@@ -2692,6 +2540,77 @@
     "AutoRestart": {
       "name": "Automatic Login",
       "help": "Log back into the game when the game has been ended."
+    }
+  },
+  "GGManager": {
+    "_info": {
+      "name": "GGManager._info.name",
+      "help": "GGManager._info.help"
+    },
+    "Enable": {
+      "name": "GGManager.Enable.name",
+      "help": "GGManager.Enable.help"
+    },
+    "RestartEverytime": {
+      "name": "GGManager.RestartEverytime.name",
+      "help": "GGManager.RestartEverytime.help"
+    },
+    "GGMultiplyingFactor": {
+      "name": "GGManager.GGMultiplyingFactor.name",
+      "help": "GGManager.GGMultiplyingFactor.help"
+    },
+    "GGAction": {
+      "name": "GGManager.GGAction.name",
+      "help": "GGManager.GGAction.help",
+      "auto": "auto",
+      "manual": "manual"
+    },
+    "GGLuapath": {
+      "name": "GGManager.GGLuapath.name",
+      "help": "GGManager.GGLuapath.help"
+    },
+    "GGLuapathRecord": {
+      "name": "GGManager.GGLuapathRecord.name",
+      "help": "GGManager.GGLuapathRecord.help"
+    },
+    "GGPackageName": {
+      "name": "GGManager.GGPackageName.name",
+      "help": "GGManager.GGPackageName.help"
+    },
+    "GGLowLimit": {
+      "name": "GGManager.GGLowLimit.name",
+      "help": "GGManager.GGLowLimit.help"
+    },
+    "DisabledTask": {
+      "name": "GGManager.DisabledTask.name",
+      "help": "GGManager.DisabledTask.help",
+      "disable_guild_and_dangerous": "disable_guild_and_dangerous",
+      "disable_all_dangerous_task": "disable_all_dangerous_task",
+      "disable_meta_and_exercise": "disable_meta_and_exercise",
+      "disable_exercise": "disable_exercise",
+      "enable_all": "enable_all"
+    }
+  },
+  "PowerLimit": {
+    "_info": {
+      "name": "Power Limit",
+      "help": "Power over this will cause a restart and enable GG in config"
+    },
+    "Exercise": {
+      "name": "Exercise",
+      "help": ""
+    },
+    "Raid": {
+      "name": "Raid",
+      "help": ""
+    },
+    "Ash": {
+      "name": "Ash",
+      "help": ""
+    },
+    "Coalition": {
+      "name": "Coalition",
+      "help": ""
     }
   },
   "Storage": {
@@ -2705,6 +2624,10 @@
     }
   },
   "Gui": {
+    "Login": {
+      "Login": "Please login below.",
+      "LoginError": "Wrong password!"
+    },
     "Aside": {
       "Install": "Install",
       "Home": "Home",
@@ -2731,7 +2654,9 @@
       "DisableTranslateMode": "Click here to disable translate mode",
       "ConfigSaved": "Config saved",
       "AlasIsRunning": "Scheduler is already running",
-      "ClickToUpdate": "New update available, click here to update"
+      "ClickToUpdate": "New update available, click here to update",
+      "AlasRestart": "Alas will restart in 3 seconds",
+      "ReloadEnabled": "Reload not enabled"
     },
     "Status": {
       "Running": "Running",
@@ -2748,17 +2673,26 @@
       "Translate": "Translate",
       "Update": "Updater",
       "Remote": "Remote access",
-      "Utils": "Utils"
+      "Utils": "Utils",
+      "RaiseException": "Raise Exception",
+      "ForceRestart": "Force Restart"
     },
     "Overview": {
       "Scheduler": "Scheduler",
-      "Dashboard": "Gui.Overview.Dashboard",
-      "SecondsAgo": "Seconds ago",
+      "Dashboard": "Dashboard",
+      "Log": "Log",
+      "Running": "Running",
+      "Pending": "Pending",
+      "Waiting": "Waiting",
+      "NoTask": "No Task"
+    },
+    "Dashboard": {
+      "TimeError": "TimeError",
+      "JustNow": "JustNow",
       "MinutesAgo": "Minutes ago",
       "HoursAgo": "Hours ago",
       "DaysAgo": "Days ago",
-      "MonthsAgo": "Months ago",
-      "YearsAgo": "Years ago",
+      "LongTimeAgo": "Long time ago",
       "NoData": "No data",
       "Oil": "Oil",
       "Coin": "Coin",
@@ -2771,12 +2705,7 @@
       "Merit": "Merit",
       "Medal": "Medal",
       "Core": "Core Data",
-      "GuildCoin": "Guild Coin",
-      "Log": "Log",
-      "Running": "Running",
-      "Pending": "Pending",
-      "Waiting": "Waiting",
-      "NoTask": "No Task"
+      "GuildCoin": "Guild Coin"
     },
     "AddAlas": {
       "PopupTitle": "Add new config",

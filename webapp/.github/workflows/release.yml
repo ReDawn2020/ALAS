@@ -30,13 +30,13 @@ jobs:
       version: ${{ steps.version.outputs.build-version }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.2
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4.0.2
         with:
-          node-version: 14
+          node-version: 20
 
       - name: Get last git tag
         id: tag
@@ -55,21 +55,20 @@ jobs:
         id: version
         run: echo "::set-output name=build-version::$(node -e "try{console.log(require('./electron-builder.config.js').extraMetadata.version)}catch(e){console.error(e);process.exit(1)}")"
 
-
       - name: Waiting on All checks
-        uses: lewagon/wait-on-check-action@v0.2
+        uses: lewagon/wait-on-check-action@v1.3.4
         with:
           ref: ${{ github.ref }}
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           running-workflow-name: 'draft'
 
       - name: Delete outdated drafts
-        uses: hugo19941994/delete-draft-releases@v1.0.0
+        uses: hugo19941994/delete-draft-releases@v1.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Release Draft
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@v2.0.4
         env:
           GITHUB_TOKEN: ${{ secrets.github_token }}
         with:
@@ -82,20 +81,14 @@ jobs:
   upload_artifacts:
     needs: [ draft ]
 
-    strategy:
-      matrix:
-        os: [ windows-latest ]
-    #    To compile the application for different platforms, use:
-    #    os: [ macos-latest, ubuntu-latest, windows-latest ]
-
-    runs-on: ${{ matrix.os }}
+    runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4.1.2
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4.0.2
         with:
-          node-version: 16 # Need for npm >=7.7
+          node-version: 20 # Need for npm >=7.7
           cache: 'npm'
 
       - name: Install dependencies
@@ -110,7 +103,7 @@ jobs:
 
       # Compile app and upload artifacts
       - name: Compile & release Electron app
-        uses: samuelmeuli/action-electron-builder@v1
+        uses: samuelmeuli/action-electron-builder@v1.6.0
         env:
           VITE_APP_VERSION: ${{ needs.draft.outputs.version }}
         with:

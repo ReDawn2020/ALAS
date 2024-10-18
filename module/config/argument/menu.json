@@ -12,9 +12,10 @@
     "menu": "collapse",
     "page": "setting",
     "tasks": [
+      "MainNormal",
+      "MainHard",
       "Main",
       "Main2",
-      "Main3",
       "GemsFarming"
     ]
   },
@@ -25,6 +26,7 @@
       "EventGeneral",
       "Event",
       "Event2",
+      "Event3",
       "Raid",
       "Coalition",
       "MaritimeEscort",
@@ -69,7 +71,8 @@
       "Shipyard",
       "Gacha",
       "Freebies",
-      "Minigame"
+      "Minigame",
+      "DashboardUpdate"
     ]
   },
   "Opsi": {
@@ -101,7 +104,8 @@
       "OpsiDaemon",
       "Benchmark",
       "AzurLaneUncensored",
-      "GameManager"
+      "GameManager",
+      "GGManager"
     ]
   }
 }

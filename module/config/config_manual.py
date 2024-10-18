@@ -15,15 +15,15 @@ class ManualConfig:
     > Exercise
     > Dorm > Meowfficer > Guild > Gacha
     > Reward
-    > ShopFrequent > ShopOnce > Shipyard > Freebies > Minigame
+    > ShopFrequent > ShopOnce > Shipyard > Freebies > DashboardUpdate > Minigame
     > OpsiExplore
     > OpsiAshBeacon
     > OpsiDaily > OpsiShop > OpsiVoucher
     > OpsiAbyssal > OpsiStronghold > OpsiObscure > OpsiArchive
-    > Daily > Hard > OpsiAshBeacon > OpsiAshAssist  > OpsiMonthBoss
+    > Daily >  Hard > OpsiAshBeacon > OpsiAshAssist  > OpsiMonthBoss
     > Sos > EventSp > EventA > EventB > EventC > EventD
     > RaidDaily > CoalitionSp > WarArchives > MaritimeEscort
-    > Event > Event2 > Raid > Coalition > Main > Main2 > Main3
+    > Event > Event2 > Event3 > Raid > Coalition > MainNormal > MainHard > Main > Main2
     > OpsiMeowfficerFarming
     > GemsFarming
     > OpsiHazard1Leveling
@@ -113,6 +113,7 @@ class ManualConfig:
     """
     module.map.fleet
     """
+    MAP_HAS_MODE_SWITCH = False  # event_20240725_cn has mode switch in map preparation
     MAP_HAS_CLEAR_PERCENTAGE = True
     MAP_HAS_WALK_SPEEDUP = False
     MAP_HAS_AMBUSH = True
@@ -139,6 +140,8 @@ class ManualConfig:
     MAP_ENEMY_GENRE_SIMILARITY = 0.85
     MAP_SIREN_MOVE_WAIT = 1.5  # The enemy moving takes about 1.2 ~ 1.5s.
     MAP_SIREN_COUNT = 0
+    MAP_SIREN_HAS_BOSS_ICON = False  # Anonymous siren with small boss icon at bottom-right
+    MAP_SIREN_HAS_BOSS_ICON_SMALL = False
     MAP_HAS_MYSTERY = True
     MAP_MYSTERY_MAP_CLICK = True
     MAP_MYSTERY_HAS_CARRIER = False
@@ -179,7 +182,7 @@ class ManualConfig:
     # Use the green arrow on current fleet to decide if fleet arrived a certain grid
     MAP_WALK_USE_CURRENT_FLEET = False
     # Optimize walk path, reducing ambushes
-    MAP_WALK_OPTIMIZE = True
+    MAP_WALK_TURNING_OPTIMIZE = True
     # Optimize swipe path, reducing swipes turn info clicks.
     MAP_SWIPE_OPTIMIZE = True
     # Swipe after boss appear. Could avoid map detection error when camera is on edge.
@@ -321,6 +324,8 @@ class ManualConfig:
     OS_ACTION_POINT_BOX_USE = True
     OS_ACTION_POINT_PRESERVE = 0
     OS_CL1_YELLOW_COINS_PRESERVE = 100000
+    OS_NORMAL_YELLOW_COINS_PRESERVE = 35000
+    OS_NORMAL_PURPLE_COINS_PRESERVE = 100
 
     """
     module.os.globe_detection
@@ -351,7 +356,6 @@ class ManualConfig:
     """
     DOCK_FULL_TRIGGERED = False
     GET_SHIP_TRIGGERED = False
-    RETIRE_KEEP_COMMON_CV = False
     COMMON_CV_THRESHOLD = 0.9
 
     """

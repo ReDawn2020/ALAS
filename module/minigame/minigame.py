@@ -7,10 +7,7 @@ from module.ui.page import page_game_room
 from module.ui.scroll import Scroll
 from module.ui.ui import UI
 
-OCR_COIN = Digit(COIN_HOLDER,
-                 name='OCR_COIN',
-                 letter=(255, 235, 115),
-                 threshold=128)
+OCR_COIN = Digit(COIN_HOLDER, name='OCR_COIN', letter=(255, 235, 115), threshold=128)
 MINIGAME_SCROLL = Scroll(MINIGAME_SCROLL_AREA, color=(247, 247, 247), name='MINIGAME_SCROLL')
 
 class MinigameRun(UI):
@@ -57,6 +54,9 @@ class MinigameRun(UI):
         """
         # specific
         if self.deal_specific_popup():
+            return True
+        if self.handle_popup_confirm('TICKETS_FULL'):
+            self.interval_reset(COIN_POPUP, interval=3)
             return True
         # coins more than 31, deal popup
         if self.appear_then_click(COIN_POPUP, offset=(5, 5), interval=3):
